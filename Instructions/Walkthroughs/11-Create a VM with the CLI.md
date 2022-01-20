@@ -1,0 +1,120 @@
+---
+wts:
+    title: '11 – Erstellen eines virtuellen Computers mithilfe der CLI (10 Min.)'
+    module: 'Modul 03: Kernlösungen und Verwaltungstools beschreiben'
+---
+# 11 – Erstellen eines virtuellen Computers mithilfe der CLI (10 Min.)
+
+In dieser exemplarischen Vorgehensweise konfigurieren wir die Cloud Shell, erstellen mithilfe von Azure CLI eine Ressourcengruppe und einen virtuellen Computer und überprüfen die Empfehlungen von Azure Advisor. 
+
+# Aufgabe 1: Die Cloud Shell konfigurieren 
+
+In dieser Aufgabe konfigurieren wir Cloud Shell und verwenden dann Azure CLI, um eine Ressourcengruppe und einen virtuellen Computer zu erstellen.  
+
+1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
+
+2. Öffnen Sie im Azure-Portal die Option **Azure Cloud Shell**, indem Sie auf das Symbol oben rechts im Azure-Portal klicken.
+
+    ![Screenshot des Azure Cloud Shell-Symbols im Azure-Portal.](../images/1002.png)
+   
+3. Wenn Sie im Azure Cloud Shell-Dialogfeld aufgefordert werden, entweder **Bash** oder **PowerShell** auszuwählen, wählen Sie **Bash** aus. 
+
+4. Ein neues Fenster mit der Meldung **Sie haben keinen Speicher bereitgestellt** wird angezeigt. Wählen Sie **Erweiterte Einstellungen** aus.
+
+5. Füllen Sie in den erweiterten Einstellungen die folgenden Felder aus, und klicken Sie auf „Speicher erstellen“:
+    - Ressourcengruppe: **Erstellen einer neuen Ressourcengruppe**
+    - Speicherkonto: Erstellen Sie ein neues Konto mit einem global eindeutigen Namen, z. B. cloudshellxyzstorage.
+    - Dateifreigabe: Erstellen Sie eine neue Dateifreigabe mit dem Namen „cloudshellfileshare“.
+
+
+# Aufgabe 2: Erstellen eines virtuellen Computers mit CLI
+
+In dieser Aufgabe verwenden wir Azure CLI, um eine Ressourcengruppe und einen virtuellen Computer zu erstellen.
+
+1. Stellen Sie sicher, dass **Bash** im Dropdownmenü oben links im Cloud Shell-Bereich ausgewählt ist (wählen Sie andernfalls diese Option aus).
+
+    ![Screenshot der Azure-Portal Azure Cloud Shell mit hervorgehobenem Bash-Dropdown.](../images/1002a.png)
+
+
+2. Überprüfen Sie mit dem folgenden Befehl, in welcher Ressourcengruppe Sie sich befinden.
+
+    ```cli
+    az group list --output table
+    ```
+
+4. Geben Sie in Cloud Shell den folgenden Befehl ein, und vergewissern Sie sich, dass jede Zeile mit Ausnahme der letzten Zeile mit einem umgekehrten Schrägstrich (`\`) endet. Wenn Sie den gesamten Befehl in derselben Zeile eingeben, verwenden Sie keine umgekehrten Schrägstriche. 
+
+    ```cli
+    az vm create \
+    --name myVMCLI \
+    --resource-group myRGCLI \
+    --image UbuntuLTS \
+    --location EastUS2 \
+    --admin-username azureuser \
+    --admin-password Pa$$w0rd1234
+    ```
+
+    >**Hinweis**: Wenn Sie die Befehlszeile auf einem Windows-Computer verwenden, ersetzen Sie den umgekehrten Schrägstrich (`\`) durch das Caretzeichen (`^`).
+
+    **HINWEIS**: Die Ausführung des Befehls dauert 2 bis 3 Minuten. Der Befehl erstellt einen virtuellen Computer und verschiedene damit verbundene Ressourcen wie Speicher-, Netzwerk- und Sicherheitsressourcen. Fahren Sie mit dem nächsten Schritt erst dann fort, wenn die Bereitstellung des virtuellen Computers abgeschlossen ist. 
+
+5. Wenn der Befehl ausgeführt wurde, schließen Sie im Browserfenster den Cloud Shell-Bereich.
+
+6. Suchen Sie im Azure-Portal nach **Virtuelle Computer**, und überprüfen Sie, ob **myVMCLI** ausgeführt wird.
+
+    ![Screenshot der Seite „Virtuelle Computer“, wobei myVMPS ausgeführt wird.](../images/1101.png)
+
+
+# Aufgabe 3: Ausführen von Befehlen in Cloud Shell
+
+In dieser Aufgabe üben wir das Ausführen von CLI-Befehlen über Cloud Shell. 
+
+1. Öffnen Sie im Azure-Portal die Option **Azure Cloud Shell**, indem Sie auf das Symbol oben rechts im Azure-Portal klicken.
+
+2. Stellen Sie sicher, dass **Bash** im Dropdownmenü oben links im Cloud Shell-Bereich ausgewählt ist.
+
+3. Rufen Sie Informationen zu dem von Ihnen bereitgestellten virtuellen Computer ab, einschließlich Name, Ressourcengruppe, Ort und Status. Beachten Sie, dass der Energiestatus **Wird ausgeführt** lautet.
+
+    ```cli
+    az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
+    ```
+
+4. Halten Sie den virtuellen Computer an. Beachten Sie die Meldung, dass die Abrechnung weiterläuft, bis die Zuordnung des virtuellen Computers aufgehoben wird. 
+
+    ```cli
+    az vm stop --resource-group myRGCLI --name myVMCLI
+    ```
+
+5. Überprüfen Sie den Status Ihres virtuellen Computers. Der Energiestatus sollte jetzt **Beendet** lauten.
+
+    ```cli
+    az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
+    ```
+
+# Aufgabe 4: Überprüfen von Azure Advisor-Empfehlungen
+
+In dieser Aufgabe überprüfen wir die Empfehlungen von Azure Advisor.
+
+   **Hinweis:** Wenn Sie das vorherige Lab (Erstellen eines virtuellen Computers mithilfe von PowerShell) abgeschlossen haben, haben Sie diese Aufgabe bereits ausgeführt. 
+
+1. Suchen Sie auf Blatt **Alle Dienste** nach **Advisor**, und wählen Sie diese Option aus. 
+
+2. Wählen Sie auf dem Blatt **Advisor** den Eintrag **Übersicht** aus. Beachten Sie, dass Empfehlungen nach Zuverlässigkeit, Sicherheit, Leistung und Kosten gruppiert werden. 
+
+    ![Screenshot der Seite „Advisor-Übersicht“. ](../images/1103.png)
+
+3. Wählen Sie **Alle Empfehlungen** aus und Sie sich Zeit, um die einzelnen Empfehlungen und vorgeschlagenen Maßnahmen anzuzeigen. 
+
+    **Hinweis:** Die Empfehlungen sind je nach Ihren Ressourcen unterschiedlich. 
+
+    ![Screenshot der Advisor-Seite „Alle Empfehlungen“. ](../images/1104.png)
+
+4. Beachten Sie, dass Sie die Empfehlungen als CSV- oder PDF-Datei herunterladen können. 
+
+5. Beachten Sie, dass Sie Warnungen erstellen können. 
+
+6. Wenn Sie Zeit haben, experimentieren Sie weiter mit Azure CLI. 
+
+Herzlichen Glückwunsch! Sie haben Cloud Shell konfiguriert, einen virtuellen Computer mit Azure CLI erstellt, Azure CLI-Befehle geübt und Advisor-Empfehlungen angesehen.
+
+**HINWEIS**: Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe, und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
