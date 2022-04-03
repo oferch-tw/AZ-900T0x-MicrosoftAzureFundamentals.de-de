@@ -1,19 +1,25 @@
 ---
 wts:
-    title: '19 – Verwenden des Azure-Preisrechners (10 Min.)'
-    module: 'Modul 06: Beschreiben von Azure Cost Management und der Vereinbarungen zum Servicelevel'
+  title: 19 – Verwenden des Azure-Preisrechners (10 Min.)
+  module: 'Module 06: Describe Azure cost management and service level agreements'
+ms.openlocfilehash: 9b071ca3caa80cc8f78541a61010b5b2d0fe8053
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907871"
 ---
-# 19 – Verwenden des Preisrechners (10 Min.)
+# <a name="19---use-the-pricing-calculator-10-min"></a>19 – Verwenden des Preisrechners (10 Min.)
 
 In dieser exemplarischen Vorgehensweise verwenden wir den Azure-Preisrechner, um einen Kostenvoranschlag für einen virtuellen Azure-Computer und zugehörige Netzwerkressourcen zu erstellen.
 
-# Aufgabe 1: Konfigurieren des Preisrechners
+# <a name="task-1-configure-the-pricing-calculator"></a>Aufgabe 1: Konfigurieren des Preisrechners
 
 In dieser Aufgabe schätzen wir die Kosten einer Infrastruktur-Stichprobe mithilfe des Azure-Preisrechners ab. 
 
-**HINWEIS**: Um eine Azure-Preisrechnerschätzung zu erstellen, enthält diese exemplarische Vorgehensweise Beispielkonfigurationen für den virtuellen Computer und die zugehörigen Ressourcen. Verwenden Sie diese Beispielkonfigurationen, oder stellen Sie stattdessen dem Azure-Preisrechner Details zu Ihren *tatsächlichen* Ressourcenanforderungen zur Verfügung.
+**Hinweis:** Um eine Azure-Preisrechnerschätzung zu erstellen, enthält diese exemplarische Vorgehensweise Beispielkonfigurationen für den virtuellen Computer und die zugehörigen Ressourcen. Verwenden Sie diese Beispielkonfigurationen, oder stellen Sie stattdessen dem Azure-Preisrechner Details zu Ihren *tatsächlichen* Ressourcenanforderungen zur Verfügung.
 
-1. Navigieren Sie in einem Browser zur Webseite mit dem [Azure-Preisrechner](https://azure.microsoft.com/de-de/pricing/calculator/).
+1. Navigieren Sie in einem Browser zur Webseite mit dem [Azure-Preisrechner](https://azure.microsoft.com/en-us/pricing/calculator/).
 
 2. Klicken Sie auf der Registerkarte **Produkte** auf **Virtual Machines**, um Details zu Ihrer Konfiguration des virtuellen Computers hinzuzufügen. Scrollen Sie nach unten, um die Details des virtuellen Computers anzuzeigen. 
 
@@ -28,12 +34,12 @@ In dieser Aufgabe schätzen wir die Kosten einer Infrastruktur-Stichprobe mithil
     | Region | **Europa, Norden** |
     | Betriebssystem | **Windows** |
     | Typ | **(Nur Betriebssystem)** |
-    | Ebene | **Standard** |  
-    | Instanz | **A2: 2 Kernspeicher, 3,5 GB RAM, 135 GB temporärer Speicher** |
+    | Tarif | **Standard** |  
+    | Instanz | **A2: 2 Kerne, 3,5 GB RAM, 135 GB temporärer Speicher** |
 
    ![Screenshot des VM-Konfigurationsbereichs auf der Azure-Webseite für Preisrechnerschätzung. Die hervorgehobenen Beispiele für vom Benutzer eingegebene Konfigurationseigenschaftswerte des virtuellen Computers geben an, wie eine Konfiguration des virtuellen Computers in einer Azure-Preisrechnerschätzung angegeben wird.](../images/1902.png)
 
-    **HINWEIS**: Die Spezifikationen und Preise der Instanzen des virtuellen Computers können von denen in diesem Beispiel abweichen. Folgen Sie dieser exemplarischen Vorgehensweise, indem Sie eine Instanz auswählen, die dem Beispiel so genau wie möglich entspricht. Wählen Sie im Menü **Mehr Info** auf der rechten Seite die Option **Produktdetails** aus, um Details zu den verschiedenen Produktoptionen des virtuellen Computers anzuzeigen.
+    **Hinweis:** Die Spezifikationen und Preise der Instanzen des virtuellen Computers können von denen in diesem Beispiel abweichen. Folgen Sie dieser exemplarischen Vorgehensweise, indem Sie eine Instanz auswählen, die dem Beispiel so genau wie möglich entspricht. Wählen Sie im Menü **Mehr Info** auf der rechten Seite die Option **Produktdetails** aus, um Details zu den verschiedenen Produktoptionen des virtuellen Computers anzuzeigen.
 
 5. Legen Sie **Abrechnungsoption** auf **Vorausbezahlung** fest.
 
@@ -41,15 +47,15 @@ In dieser Aufgabe schätzen wir die Kosten einer Infrastruktur-Stichprobe mithil
 
 6. In Azure wird ein Monat als 730 Stunden definiert. Wenn Ihr virtueller Computer jeden Monat zu 100 Prozent verfügbar sein muss, setzen Sie den Wert für Stunden pro Monat auf `730`. In dieser exemplarischen Vorgehensweise muss ein virtueller Computer jeden Monat zu 50 Prozent verfügbar sein.
 
-    Belassen Sie die Anzahl der virtuellen Computer auf `1`, und ändern Sie den Wert für Stunden pro Monat zu `365`.
+    Belassen Sie die Anzahl der virtuellen Computer auf `1`, und ändern Sie den Wert für Stunden pro Monat in `365`.
 
    ![Screenshot des Bereichs mit den Abrechnungsoptionen des virtuellen Computers auf der Azure-Webseite für Preisrechnerschätzung. Die hervorgehobene Zahl von Instanzen des virtuellen Computers und Stunden pro Monat gibt an, wie die Anzahl von Instanzen und Stunden pro Monat für einen virtuellen Computer in einer Schätzung des Azure-Preisrechners bestimmt wird.](../images/1904.png)
 
 7. Ändern Sie im Bereich **Verwaltete BS-Datenträger** die standardmäßige VM-Speicherkonfiguration.
 
-    | Ebene | Diskgröße | Zahl der Disks | Momentaufnahme | Speichertransaktionen |
+    | Tarif | Datenträgergröße | Anzahl der Datenträger | Snapshot | Speichertransaktionen |
     | ---- | --------- | --------------- | -------- | -------------------- |
-    | HDD Standard | S30: 1.024 GiB | 1 | Aus | 10.000 |
+    | HDD Standard | S30: 1024 GiB | 1 | Aus | 10.000 |
 
    ![Screenshot des Optionsbereichs für verwaltete Betriebssystemdatenträger auf der Azure-Preisberechnungs-Webseite. Die hervorgehobenen Optionen für Ebenentyp, Datenträgergröße, Anzahl der Datenträger und Anzahl der Speichertransaktionen geben an, wie eine Speicherkonfiguration für einen virtuellen Computer in einer Azure-Preisrechnerschätzung angegeben wird.](../images/1905.png)
 
@@ -61,7 +67,7 @@ In dieser Aufgabe schätzen wir die Kosten einer Infrastruktur-Stichprobe mithil
 
     | Region | Betrag für ausgehende Datenübertragung in Zone 1 |
     | ------ | -------------------------------------- |
-    | Europa, Norden | 50 GB |
+    | Nordeuropa | 50 GB |
 
    ![Screenshot des Konfigurationsbereichs für die Netzwerkbandbreite auf der Webseite des Azure-Preisrechners. Die hervorgehobenen Beispiele für vom Benutzer eingegebene Bandbreiten-Eigenschaftswerte geben an, wie eine Bandbreitenkonfiguration für einen virtuellen Computer innerhalb einer Azure-Preisrechnerschätzung angegeben wird.](../images/1907.png)
 
@@ -74,23 +80,23 @@ In dieser Aufgabe schätzen wir die Kosten einer Infrastruktur-Stichprobe mithil
     | Einstellungen | Wert |
     | -- | -- |
     | Region | **Europa, Norden** |
-    | Ebene | **Basic** |
-    | Größe | **Small** |
+    | Tarif | **Grundlegend** |
+    | Size | **Klein** |
     | Instanzen | **1** |  
     | Stunden | **365** |
-    | Verarbeitete Daten | **50 GB** |
-    | Zone 1: Nordamerika, Europa | **50 GB**|
+    | Verarbeitete Datenmenge | **50 GB** |
+    | Zone 1: Nordamerika, Europa | **50 GB**|
 
     ![Screenshot des Application Gateway-Konfigurationsbereichs auf der Webseite für die Azure-Preisrechnerschätzung.](../images/1909.png)
 
 
-# Aufgabe 2: Überprüfen der Preisschätzung
+# <a name="task-2-review-the-pricing-estimate"></a>Aufgabe 2: Überprüfen der Preisschätzung
 
 In dieser Aufgabe werden die Ergebnisse des Azure-Preisrechners überprüft. 
 
 1. Scrollen Sie zum Ende der Azure-Preisrechner-Webseite, um die Gesamtsumme der **Geschätzten monatlichen Kosten** anzuzeigen.
 
-    **HINWEIS**: Informieren Sie sich über die verschiedenen Optionen, die im Azure-Preisrechner verfügbar sind. In dieser exemplarischen Vorgehensweise müssen Sie beispielsweise die Währung auf Euro aktualisieren.
+    **Hinweis:** Informieren Sie sich über die verschiedenen Optionen, die im Azure-Preisrechner verfügbar sind. In dieser exemplarischen Vorgehensweise müssen Sie beispielsweise die Währung auf Euro aktualisieren.
 
 2. Ändern Sie die Währung in Euro und wählen Sie dann **Export**, um eine Kopie des Kostenvoranschlags für die Offline-Anzeige im Microsoft Excel-Format (`.xlsx`) herunterzuladen.
 
@@ -98,4 +104,4 @@ In dieser Aufgabe werden die Ergebnisse des Azure-Preisrechners überprüft.
 
     ![Screenshot einer Beispielschätzung des Azure-Preisrechners in Microsoft Excel.](../images/1911.png)
 
-Herzlichen Glückwunsch! Sie haben einen Kostenvoranschlag aus dem Azure-Preisrechner heruntergeladen.
+Glückwunsch! Sie haben einen Kostenvoranschlag aus dem Azure-Preisrechner heruntergeladen.

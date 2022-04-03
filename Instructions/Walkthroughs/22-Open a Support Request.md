@@ -1,15 +1,21 @@
 ---
 wts:
-    title: '22 – Öffnen einer Supportanfrage (5 Min.)'
-    module: 'Wird im aktuellen Examen zurzeit nicht verwendet'
+  title: 22 – Öffnen einer Supportanfrage (5 Min.)
+  module: Not currently utilized in current exam
+ms.openlocfilehash: 11305a9aa8296be673c3710619c2a7d1a5532d03
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907919"
 ---
-# 22 – Öffnen einer Supportanfrage (5 Min.)
+# <a name="22---open-a-support-request-5-min"></a>22 – Öffnen einer Supportanfrage (5 Min.)
 
 In dieser exemplarischen Vorgehensweise werden wir die verfügbaren Supportplanoptionen aufzeigen und anschließend das Erstellen und Überwachen einer neuen Supportanfrage üben.
 
-# Aufgabe 1: Anzeigen der verfügbaren Supportplanoptionen und einer technischen Supportanfrage
+# <a name="task-1-view-available-support-plan-options-and-a-technical-support-request"></a>Aufgabe 1: Anzeigen der verfügbaren Supportplanoptionen und einer technischen Supportanfrage
 
-1. Melden Sie sich beim [**Azure-Portal**](https://portal.azure.com) an.
+1. Melden Sie sich am [**Azure-Portal**](https://portal.azure.com) an.
 
 2. Suchen Sie auf dem Blatt **Alle Dienste** die Option **Hilfe und Support**, und wählen Sie sie aus. Wählen Sie anschließend **Supportpläne** aus.
 
@@ -20,39 +26,39 @@ In dieser exemplarischen Vorgehensweise werden wir die verfügbaren Supportplano
     | Einstellung | Wert|
     |----|--------|
     | Problemtyp| **Technisch** |
-    | Abonnement | **Wählen Sie Ihr Abonnement** |
+    | Subscription | **Auswählen Ihres Abonnements** |
     | Dienst | **Alle Services**, **virtueller Computer mit Linux** |
-    | Zusammenfassung | **Der Datenträgerzugriff ist bei großen Dateien sehr langsam.** |
+    | Zusammenfassung | **Der Datenträgerzugriff ist bei großen Dateien sehr langsam** |
     | Problemtyp | **VM-Leistung** |
-    | Problemuntertyp | **Der Datenträgerdurchsatz ist geringer als erwartet** |    
+    | Problemuntertyp | **Datenträgerdurchsatz ist niedriger als erwartet** |    
     | | |
 
-5. Klicken Sie auf **Weiter: Lösungen >>** und lesen Sie die empfohlenen Lösungen durch.
+5. Klicken Sie auf **Next: Lösungen >>** und lesen Sie die empfohlenen Lösungen durch.
 
-6. Klicken Sie auf **Weiter: Details >>**. Wenn Sie eine tatsächliche Supportanfrage senden, geben Sie so viele Informationen wie möglich an, um eine schnelle Lösung des Problems zu ermöglichen. Ihre Kontaktauswahl auf dieser Seite hängt von Ihrem Supportplan ab. 
+6. Klicken Sie auf **Next: Details >>** . Wenn Sie eine tatsächliche Supportanfrage senden, geben Sie so viele Informationen wie möglich an, um eine schnelle Lösung des Problems zu ermöglichen. Ihre Kontaktauswahl auf dieser Seite hängt von Ihrem Supportplan ab. 
 
     **Hinweis:** An diesem Punkt werden wir aufhören. Verstehen Sie, wie Sie eine technische Anfrage einreichen können?
 
-# Aufgabe 2: Erstellen einer Supportanfrage zur Abrechnung
+# <a name="task-2-create-a-billing-support-request"></a>Aufgabe 2: Erstellen einer Supportanfrage zur Abrechnung
 
 1. Wechseln Sie wieder zum Abschnitt **Neue Supportanfrage** und zur Registerkarte **Grundlagen**. 
 
     | Einstellung | Wert|
     |----|--------|
     | Problemtyp| **Abrechnung** |
-    | Abonnement | **Wählen Sie Ihr Abonnement** |
-    | Zusammenfassung | **Die monatliche Gebühr ist nicht korrekt.** |
+    | Subscription | **Auswählen Ihres Abonnements** |
+    | Zusammenfassung | **Die monatliche Gebühr ist nicht korrekt** |
     | Problemtyp | **Preise** |
     | Problemuntertyp | **Helfen Sie mir, die Servicepreise zu ermitteln** |    
 
-2. Klicken Sie auf **Weiter: Lösungen** und lesen Sie die empfohlenen Lösungen durch.
+2. Klicken Sie auf **Next: Lösungen >>** und lesen Sie die empfohlenen Lösungen durch.
 
-3. Klicken Sie auf **Weiter: Details**.  Wenn Sie eine echte Supportanfrage senden, geben Sie so viele Informationen wie möglich an, um eine schnelle Lösung des Problems zu ermöglichen. 
+3. Klicken Sie auf **Next: Details**.  Wenn Sie eine echte Supportanfrage senden, geben Sie so viele Informationen wie möglich an, um eine schnelle Lösung des Problems zu ermöglichen. 
 
     **Hinweis:** An diesem Punkt werden wir aufhören. Verstehen Sie, wie Sie eine Supportanfrage stellen können?
 
 4. Klicken Sie auf **Alle Supportanfragen**. Hier werden Ihre Supportanfragen angezeigt. Eine E-Mail, die Details zur Supportanfrage enthält, wird auch an Ihre E-Mail-Adresse gesendet.
 
-Herzlichen Glückwunsch! Sie haben die verfügbaren Supportplanoptionen angezeigt und das Erstellen und Überwachen einer neuen Supportanfrage geübt.
+Glückwunsch! Sie haben die verfügbaren Supportplanoptionen angezeigt und das Erstellen und Überwachen einer neuen Supportanfrage geübt.
 
-**HINWEIS**: Klicken Sie hier für weitere Informationen zum [**Erstellen eines Azure-Supporttickets**](https://azure.microsoft.com/de-de/support/create-ticket).
+**Hinweis:** Klicken Sie hier für weitere Informationen zum [**Erstellen eines Azure-Supporttickets**](https://azure.microsoft.com/en-us/support/create-ticket).

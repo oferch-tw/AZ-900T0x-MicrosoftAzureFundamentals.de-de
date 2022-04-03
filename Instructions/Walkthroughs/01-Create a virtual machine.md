@@ -1,36 +1,42 @@
 ---
 wts:
-    title: '01 – Erstellen eines virtuellen Computers im Portal (10 Min.)'
-    module: 'Modul 02 – Core Azure Services (Workloads)'
+  title: 01 – Erstellen eines virtuellen Computers im Portal (10 Min.)
+  module: Module 02 - Core Azure Services (Workloads)
+ms.openlocfilehash: 2e2a613f965d41405b025166876b28be391f10d8
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907886"
 ---
-# 01 – Erstellen Sie einen virtuellen Computer im Portal (10 Min.)
+# <a name="01---create-a-virtual-machine-in-the-portal-10-min"></a>01 – Erstellen eines virtuellen Computers im Portal (10 Min.)
 
 In dieser exemplarischen Vorgehensweise erstellen wir einen virtuellen Computer im Azure-Portal, stellen eine Verbindung zum virtuellen Computer her, installieren die Webserverrolle und testen dann. 
 
-**HINWEIS**: Nehmen Sie sich bei dieser exemplarischen Vorgehensweise die Zeit, auf die Informationssymbole zu klicken und diese zu lesen. 
+**Hinweis:** Nehmen Sie sich bei dieser exemplarischen Vorgehensweise die Zeit, auf die Informationssymbole zu klicken und diese zu lesen. 
 
-# Aufgabe 1: Den virtuellen Computer erstellen 
+# <a name="task-1-create-the-virtual-machine"></a>Aufgabe 1: Erstellen des virtuellen Computers 
 1. Melden Sie sich beim Azure-Portal an: **https://portal.azure.com**
 
-3. Suchen Sie auf dem Blatt **Alle Dienste** im Portalmenü nach **Virtuelle Computer**, und wählen Sie diese Option aus. Klicken Sie dann auf **+ Hinzufügen, +Erstellen, +Neu**, und wählen Sie **+Virtueller Computer** im Dropdownfeld aus.
+3. Suchen Sie auf dem Blatt **Alle Dienste** im Portalmenü nach **Virtuelle Computer**, und wählen Sie die Option aus. Klicken Sie dann auf **+ Hinzufügen, +Erstellen, +Neu**, und wählen Sie **+Virtueller Computer** im Dropdownfeld aus.
 
 4. Geben Sie auf der Registerkarte **Grundlagen** die folgenden Informationen ein (belassen Sie ansonsten die Standardeinstellungen):
 
     | Einstellungen | Werte |
     |  -- | -- |
-    | Abonnement | **Standardwert verwenden** |
-    | Ressourcengruppe | **Erstellen einer neuen Ressourcengruppe** |
+    | Subscription | **Standarddaten verwenden** |
+    | Resource group | **Neue Ressourcengruppe erstellen** |
     | Name des virtuellen Computers | **myVM** |
     | Region | **(USA) USA, Osten**|
     | Verfügbarkeitsoptionen | Keine Optionen für die Infrastrukturredundanz erforderlich|
-    | Image | **Windows Server 2019 Datacenter - Gen2**|
-    | Größe | **Standard D2s v3**|
+    | Image | **Windows Server 2019 Datacenter, Gen2**|
+    | Size | **Standard D2s v3**|
     | Benutzername des Administratorkontos | **azureuser** |
     | Kennwort für das Administratorkonto (sorgfältig eingeben!) | **Pa$$w0rd1234**|
     | Regeln für eingehende Ports – | **Ausgewählte Ports zulassen**|
     | Eingangsports auswählen | **RDP (3389)** und **HTTP (80)**| 
 
-5. Wechseln Sie zur Registerkarte „Netzwerk“, und stellen Sie sicher, dass **HTTP (80) und RDP (3389)** im Abschnitt **Eingangsports auswählen** ausgewählt sind.
+5. Wechseln Sie zur Registerkarte „Netzwerk“, und vergewissern Sie sich, dass **HTTP (80) und RDP (3389)** im Abschnitt **Eingangsports auswählen** ausgewählt sind.
 
 6. Wechseln Sie zur Registerkarte „Verwaltung“, und wählen Sie im Abschnitt **Überwachung** die folgende Einstellung aus:
 
@@ -38,43 +44,43 @@ In dieser exemplarischen Vorgehensweise erstellen wir einen virtuellen Computer 
     | -- | -- |
     | Startdiagnose | **Deaktivieren**|
 
-7. Belassen Sie für die restlichen Werte die Standardeinstellungen, und klicken Sie dann auf die Schaltfläche **Überprüfen + erstellen** am unteren Rand der Seite.
+7. Übernehmen Sie die Standardwerte für die restlichen Einstellungen, und klicken Sie dann auf die Schaltfläche **Überprüfen + erstellen** am unteren Rand der Seite.
 
 8. Sobald die Validierung bestanden ist, klicken Sie auf die Schaltfläche **Erstellen**. Die Bereitstellung des virtuellen Computers kann zwischen fünf und sieben Minuten dauern.
 
-9. Sie erhalten Aktualisierungen auf der Bereitstellungsseite und im Bereich **Benachrichtigungen** (Glockensymbol in der oberen Menüleiste).
+9. Sie erhalten Updates auf der Bereitstellungsseite und im Bereich **Benachrichtigungen** (Glockensymbol in der oberen Menüleiste).
 
-# Aufgabe 2: Herstellen der Verbindung zum virtuellen Computer
+# <a name="task-2-connect-to-the-virtual-machine"></a>Aufgabe 2: Herstellen einer Verbindung mit dem virtuellen Computer
 
-In dieser Aufgabe verbinden wir uns per RDP (Remotedesktopprotokoll) mit dem virtuellen Computer. 
+In dieser Aufgabe stellen wir per RDP (Remotedesktopprotokoll) eine Verbindung zu unserem neuen virtuellen Computer her. 
 
 1. Klicken Sie oben in der blauen Symbolleiste auf das Glockensymbol, und wählen Sie „Zu Ressource wechseln“ aus, nachdem die Bereitstellung erfolgreich abgeschlossen wurde. 
 
-    **HINWEIS**: Sie können auch den Link **Zu Ressource wechseln** auf der Bereitstellungsseite verwenden. 
+    **Hinweis:** Sie können auch den Link **Zu Ressource wechseln** auf der Bereitstellungsseite verwenden. 
 
 2. Klicken Sie auf dem Blatt **Überblick** des virtuellen Computers auf die Schaltfläche **Verbinden**, und wählen Sie **RDP** im Dropdownfeld aus.
 
     ![Screenshot der Eigenschaften des virtuellen Computers mit hervorgehobener Schaltfläche „Verbinden“.](../images/0101.png)
 
-    **HINWEIS**: In den folgenden Anweisungen erfahren Sie, wie Sie von einem Windows-Computer aus eine Verbindung zu Ihrem virtuellen Computer herstellen. Auf einem Mac benötigen Sie einen RDP-Client wie diesen Remotedesktopclient aus dem Mac App Store. Auf einem Linux-Computer können Sie einen Open-Source-RDP-Client verwenden.
+    **Hinweis:** In den folgenden Anweisungen erfahren Sie, wie Sie von einem Windows-Computer aus eine Verbindung zu Ihrem virtuellen Computer herstellen. Auf einem Mac benötigen Sie einen RDP-Client wie etwa den Remotedesktopclient aus dem Mac App Store. Auf Linux-Computern können Sie einen Open-Source-RDP-Client verwenden.
 
-2. Übernehmen Sie auf der Seite **Verbindung mit virtuellem Computer herstellen** die Standardoptionen, um sich mit der öffentlichen IP-Adresse und Port 3389 zu verbinden. Klicken Sie dann auf **RDP-Datei herunterladen**. Unten links auf Ihrem Bildschirm wird eine Datei heruntergeladen.
+2. Behalten Sie auf der Seite **Verbindung mit virtuellem Computer herstellen** die Standardoptionen zum Herstellen der Verbindung mit der öffentlichen IP-Adresse über Port 3389 bei, und klicken auf **RDP-Datei herunterladen**. Auf der linken Seite des Bildschirms wird eine Datei heruntergeladen.
 
-3. **Öffnen** Sie die heruntergeladene RDP-Datei (links unten auf Ihrem Lab-Computer), und klicken Sie auf **Verbinden**, wenn Sie dazu aufgefordert werden. 
+3. **Öffnen** Sie die heruntergeladene RDP-Datei (unten links auf Ihrem Laborcomputer), und klicken Sie auf **Verbinden**, wenn Sie dazu aufgefordert werden. 
 
     ![Screenshot der Eigenschaften des virtuellen Computers mit hervorgehobener Schaltfläche „Verbinden“. ](../images/0102.png)
 
-4. Melden Sie sich im Fenster **Windows-Sicherheit** mit den Administratoranmeldeinformationen an, die Sie verwendet haben, als Sie die VM **azureuser** und das Kennwort **Pa$$w0rd1234** erstellt haben. 
+4. Melden Sie sich im Fenster **Windows-Sicherheit** mit den Administratoranmeldeinformationen an, die Sie beim Erstellen der VM verwendet haben: Benutzer **azureuser** und Kennwort **Pa$$w0rd1234**. 
 
-5. Möglicherweise erhalten Sie beim Anmeldevorgang eine Zertifikatwarnung. Klicken Sie auf **Ja**, um die Verbindung herzustellen und eine Verbindung zu Ihrem bereitgestellten virtuellen Computer herzustellen. Die Verbindung sollte erfolgreich hergestellt werden.
+5. Möglicherweise wird bei der Anmeldung eine Zertifikatwarnung angezeigt. Klicken Sie auf **Ja**, um die Verbindung herzustellen und sich mit Ihrem bereitgestellten virtuellen Computer zu verbinden. Die Verbindung sollte erfolgreich hergestellt werden.
 
     ![Screenshot des Dialogfelds „Zertifikatwarnung“, in dem der Benutzer über ein nicht vertrauenswürdiges Zertifikat informiert wird, mit hervorgehobener Schaltfläche „Ja“. ](../images/0104.png)
 
-Ein neuer virtueller Computer (myVM) wird in Ihrem Lab gestartet. Schließen Sie den Server-Manager und die geöffneten Dashboard-Fenster (klicken Sie dazu oben rechts auf das „x“). Jetzt sollten Sie den blauen Hintergrund Ihres virtuellen Computers sehen. **Herzlichen Glückwunsch!** Sie haben einen virtuellen Computer mit Windows Server bereitgestellt und sich mit ihm verbunden. 
+Ein neuer virtueller Computer (myVM) wird in Ihrem Lab gestartet. Schließen Sie den Server-Manager und die geöffneten Dashboard-Fenster (klicken Sie oben rechts auf das „X“). Jetzt sollten Sie den blauen Hintergrund Ihres virtuellen Computers sehen. **Glückwunsch!** Sie haben einen virtuellen Computer mit Windows Server bereitgestellt und sich mit ihm verbunden. 
 
-# Aufgabe 3: Installieren und Testen der Webserverrolle
+# <a name="task-3-install-the-web-server-role-and-test"></a>Aufgabe 3: Installieren und Testen der Webserverrolle
 
-In dieser Aufgabe installieren Sie die Webserverrolle auf dem Server in dem soeben erstellten virtuellen Computer, und vergewissern sich, dass die standardmäßige IIS-Willkommensseite angezeigt wird. 
+In dieser Aufgabe werden Sie die Webserverrolle auf dem soeben erstellten virtuellen Computer installieren und sicherstellen, dass die standardmäßige IIS-Begrüßungsseite angezeigt wird. 
 
 1. Starten Sie PowerShell auf dem soeben bereitgestellten virtuellen Computer, indem Sie in der Suchleiste nach **PowerShell** suchen, mit der rechten Maustaste auf **Windows PowerShell** klicken und **Als Administrator ausführen** auswählen.
 
@@ -90,15 +96,15 @@ In dieser Aufgabe installieren Sie die Webserverrolle auf dem Server in dem soeb
 
     ![Screenshot der Windows PowerShell-Eingabeaufforderung mit dem erfolgreich abgeschlossenen Befehl „Install-WindowsFeature -name Web-Server -IncludeManagementTools“ und der Ausgabe, dass der Vorgang erfolgreich war.](../images/0106.png)
 
-4. Wechseln Sie zurück zum Portal, navigieren Sie zurück zum Blatt **Übersicht** für „myVM“, und verwenden Sie die Schaltfläche **In Zwischenablage kopieren**, um die öffentliche IP-Adresse von „myVM“ zu kopieren. Öffnen Sie dann eine neue Browserregisterkarte, fügen Sie die öffentliche IP-Adresse in das URL-Textfeld ein, und drücken Sie die **Eingabetaste**, um die Adresse zu öffnen.
+4. Navigieren Sie im Portal zurück zum Blatt **Überblick** für myVM, und verwenden Sie die Schaltfläche **In Zwischenablage kopieren**, um die öffentliche IP-Adresse von myVM zu kopieren. Öffnen Sie eine neue Browserregisterkarte, fügen Sie die öffentliche IP-Adresse in das URL-Textfeld ein, und drücken Sie die **Eingabetaste**, um die URL zu öffnen.
 
     ![Screenshot des Eigenschaftenbereichs für den virtuellen Computer im Azure-Portal mit der kopierten IP-Adresse.](../images/0107.png)
 
-5. Die standardmäßige Willkommensseite des IIS-Webservers wird angezeigt.
+5. Die standardmäßige Begrüßungsseite des IIS-Webservers wird angezeigt.
 
     ![Screenshot der standardmäßigen Begrüßungsseite des IIS-Webservers, auf die über die öffentliche IP-Adresse in einem Webbrowser zugegriffen wird.](../images/0108.png)
 
-**Herzlichen Glückwunsch!** Sie haben eine neue VM auf einem Webserver erstellt, die über dessen öffentliche IP-Adresse erreichbar ist. Wenn Sie eine Webanwendung hosten müssen, können Sie Anwendungsdateien auf dem virtuellen Computer bereitstellen und sie für öffentlichen Zugriff auf dem bereitgestellten virtuellen Computer hosten.
+**Glückwunsch!** Sie haben eine neue VM erstellt, die über ihre öffentliche IP-Adresse erreichbar ist. Wenn Sie eine Webanwendung hosten müssen, können Sie Anwendungsdateien auf dem virtuellen Computer bereitstellen und sie für öffentlichen Zugriff auf dem bereitgestellten virtuellen Computer hosten.
 
 
-**HINWEIS**: Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe, und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft. 
+**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu überprüfen, ob der Löschvorgang erfolgreich abgeschlossen wurde. 

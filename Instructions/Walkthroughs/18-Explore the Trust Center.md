@@ -1,15 +1,21 @@
 ---
 wts:
-    title: '18 – Erkunden des Trust Center (5 Min.)'
-    module: 'Modul 05: Beschreiben der Features für Identität, Governance, Datenschutz und Compliance'
+  title: 18 – Erkunden des Trust Center (5 Min.)
+  module: 'Module 05: Describe identity, governance, privacy, and compliance features'
+ms.openlocfilehash: 9da8a5f2822210408827106be4094e14ddc4baa4
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907694"
 ---
-# 18 - Erkunden der Microsoft-Complianceangebote (5 Min.)
+# <a name="18---explore-microsoft-compliance-offerings-5-min"></a>18 - Erkunden der Microsoft-Complianceangebote (5 Min.)
 
 In dieser exemplarischen Vorgehensweise befassen wir uns mit Complianceangeboten, dem Service Trust Portal (STP) und dem Compliance-Manager. 
 
-# Aufgabe 1: Auf Microsoft-Complianceangebote zugreifen
+# <a name="task-1-access-microsoft-compliance-offerings"></a>Aufgabe 1: Auf Microsoft-Complianceangebote zugreifen
 
-1. Navigieren Sie in einem Browser zur Webseite mit den [Complianceangeboten](https://docs.microsoft.com/de-de/compliance/regulatory/offering-home).
+1. Navigieren Sie in einem Browser zur Webseite mit den [Complianceangeboten](https://docs.microsoft.com/en-us/compliance/regulatory/offering-home).
 
 2. Beachten Sie auf der Compliance-Webseite, dass die Angebote in **Global**, **US-Regierungsbehörden**, **Branche** und **Länderspezifisch** unterteilt sind.
 
@@ -18,7 +24,7 @@ In dieser exemplarischen Vorgehensweise befassen wir uns mit Complianceangeboten
     **Hinweis:** Die Seite „ISO 27001 Information Security Management-Standards“ ist typisch für die Art der von uns bereitgestellten Compliance-Informationen.
 
 
-# Aufgabe 2: Zugreifen auf das Service Trust Portal (STP)
+# <a name="task-2-access-the-service-trust-portal-stp"></a>Aufgabe 2: Zugreifen auf das Service Trust Portal (STP)
 
 1. Navigieren Sie in einem Browser zur Webseite für das [Service Trust Portal](https://servicetrust.microsoft.com/).
 
@@ -27,7 +33,7 @@ In dieser exemplarischen Vorgehensweise befassen wir uns mit Complianceangeboten
 3. Es kann einige Minuten dauern, bis alle Audits geladen sind. Sie müssen sich bei Ihrem Microsoft-Konto anmelden, um bestimmte Berichte anzuzeigen.
 
 
-# Aufgabe 3: Compliance-Manager über das Service Trust Portal öffnen
+# <a name="task-3-access-the-compliance-manager-via-the-service-trust-portal"></a>Aufgabe 3: Compliance-Manager über das Service Trust Portal öffnen
 
 Mit Compliance-Manager können Sie auf einfache Weise Risikobewertungen für Clouddienste von Microsoft durchführen. Verwenden Sie Compliance-Manager, um die Complianceaktivitäten Ihrer Organisation von der Implementierung bis zur Berichterstellung zu verwalten. 
 
@@ -35,4 +41,4 @@ Mit Compliance-Manager können Sie auf einfache Weise Risikobewertungen für Clo
 
 2. Scrollen Sie nach unten zu den **Überwachungsberichten**. Sehen Sie sich um.
 
-Herzlichen Glückwunsch! In dieser exemplarischen Vorgehensweise haben Sie auf Trust Center, Service Trust Portal (STP) und Compliance-Manager zugegriffen.
+Glückwunsch! In dieser exemplarischen Vorgehensweise haben Sie auf Trust Center, Service Trust Portal (STP) und Compliance-Manager zugegriffen.
