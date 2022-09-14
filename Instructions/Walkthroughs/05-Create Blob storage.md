@@ -2,12 +2,6 @@
 wts:
   title: 05 – Blob-Speicher erstellen (5 Min.)
   module: Module 02 - Core Azure Services (Workloads)
-ms.openlocfilehash: 554a3eb1c95b354e836fe22541f00fa1eb0bc2de
-ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137908094"
 ---
 # <a name="05---create-blob-storage-5-min"></a>05 – Blob-Speicher erstellen (5 Min.)
 
@@ -21,7 +15,7 @@ In dieser Aufgabe erstellen wir ein neues Speicherkonto.
 
 2. Suchen Sie auf dem Blatt **Alle Dienste** den Eintrag **Speicherkonten**, wählen Sie ihn aus, und klicken Sie auf **+ Hinzufügen, + Erstellen, + Neu**. 
 
-3. Geben Sie auf dem Blatt **Speicherkonto erstellen** auf der Registerkarte **Grundlagen** die folgenden Informationen ein (ersetzen Sie **xxxx** im Speicherkontonamen durch Buchstaben und Ziffern, sodass der Name global eindeutig ist). Belassen Sie ansonsten die Standardeinstellungen.
+3. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
 
     | Einstellung | Wert | 
     | --- | --- |
@@ -36,7 +30,7 @@ In dieser Aufgabe erstellen wir ein neues Speicherkonto.
 
 5. Klicken Sie auf **Überprüfen + erstellen**, um die Einstellungen Ihres Speicherkontos zu überprüfen und Azure die Validierung der Konfiguration zu ermöglichen. 
 
-6. Klicken Sie nach der Validierung auf **Erstellen**. Warten Sie auf die Benachrichtigung, dass das Konto erfolgreich erstellt wurde. 
+6. Once validated, click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>. Wait for the notification that the account was successfully created. 
 
 7. Suchen Sie auf der Homepage die Option **Speicherkonten**, und wählen Sie sie aus. Stellen Sie sicher, dass Ihr neues Speicherkonto aufgeführt ist.
 
@@ -48,7 +42,7 @@ In dieser Aufgabe erstellen wir einen Blob-Container und laden eine Blob-Datei h
 
 1. Klicken Sie auf den Namen des neuen Speicherkontos, scrollen Sie links im Menü zum Abschnitt **Datenspeicherung**, und klicken Sie auf **Container**.
 
-2. Klicken Sie auf **+ Container**, und vervollständigen Sie die Informationen. Über das Informationssymbol erhalten Sie weitere Informationen. Klicken Sie abschließend auf **Erstellen**.
+2. Click <bpt id="p1">**</bpt>+ Container<ept id="p1">**</ept> and complete the information. Use the Information icons to learn more. When done click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>.
 
 
     | Einstellung | Wert |
@@ -59,16 +53,16 @@ In dieser Aufgabe erstellen wir einen Blob-Container und laden eine Blob-Datei h
 
     ![Screenshot des neu erstellten Blob-Containers im Speicherkonto im Azure-Portal.](../images/0402.png)
 
-4. Öffnen Sie ein neues Browserfenster, und suchen Sie mit **Bing** nach einem Bild von einer Blume. Klicken Sie mit der rechten Maustaste auf das Bild, und speichern Sie es in Ihrer VM. 
+4. Open a new browser window and search <bpt id="p1">**</bpt>Bing<ept id="p1">**</ept> for an image of a flower. Right click on the image and save it to your VM. 
 
 6. Wechseln Sie zurück zum Portal, klicken Sie auf **Container1**, und wählen Sie **Hochladen** aus.
 
-5. Suchen Sie nach dem Bild, das Sie soeben auf Ihrem lokalen Computer gespeichert haben. Wählen Sie das Bild aus, und wählen Sie „Hochladen“ aus.
+5. Browse for the image file you just saved on your local computer. Select it and then select upload.
 
    
 6. Klicken Sie auf den Pfeil **Erweitert**, übernehmen Sie die Standardwerte, überprüfen Sie die verfügbaren Optionen, und klicken Sie dann auf **Hochladen**.
 
-    **Hinweis:** Auf diese Weise können Sie beliebig viele Blobs hochladen. Neue Blobs werden im Container aufgelistet.
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: You can upload as many blobs as you like in this way. New blobs will be listed within the container.
 
 7. Klicken Sie nach dem Hochladen der Datei mit der rechten Maustaste auf die Datei und beachten Sie die Optionen „Anzeigen/Bearbeiten“, „Herunterladen“, „Eigenschaften“ und „Löschen“. 
 
@@ -78,12 +72,12 @@ In dieser Aufgabe erstellen wir einen Blob-Container und laden eine Blob-Datei h
 
 1. Kehren Sie zum Blatt „Speicherkonto“ zurück, und klicken Sie auf **Diagnose und Problembehandlung**. 
 
-2. Machen Sie sich mit einigen der häufigsten Speicherprobleme vertraut. Beachten Sie, dass es mehrere Problembehandlungen gibt.
+2. Explore some of the most common storage problems. Notice there are multiple troubleshooters here.
 
-3. Scrollen Sie auf dem Blatt „Speicherkonten“ nach unten zum Abschnitt **Überwachung**, und klicken Sie auf **Insights**. Beachten Sie, dass Informationen zu Fehlern, Leistung, Verfügbarkeit und Kapazität vorhanden sind. Ihre Informationen werden davon abweichen.
+3. On the storage account blade, scroll down to the <bpt id="p1">**</bpt>Monitoring<ept id="p1">**</ept> section and click <bpt id="p2">**</bpt>Insights<ept id="p2">**</ept>. Notice there is information on Failures, Performance, Availability, and Capacity. Your information will be different.
 
     ![Screenshot der Seite „Insights“ des Speicherkontos.](../images/0403.PNG)
 
-Glückwunsch! Sie haben ein Speicherkonto erstellt und dann mit Speicherblobs gearbeitet.
+Geben Sie auf dem Blatt **Speicherkonto erstellen** auf der Registerkarte **Grundlagen** die folgenden Informationen ein (ersetzen Sie **xxxx** im Speicherkontonamen durch Buchstaben und Ziffern, sodass der Name global eindeutig ist).
 
-**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
+Belassen Sie ansonsten die Standardeinstellungen.

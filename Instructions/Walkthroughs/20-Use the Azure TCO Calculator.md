@@ -2,19 +2,13 @@
 wts:
   title: 20 – Verwenden des Azure-Gesamtbetriebskostenrechners (10 Min.)
   module: 'Module 06: Describe Azure cost management and service level agreements'
-ms.openlocfilehash: 8044b922cef99fae814fb6418a33ed7334eb506b
-ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137908166"
 ---
 # <a name="20---use-the-azure-tco-calculator-10-min"></a>20 – Verwenden des Azure-Gesamtbetriebskostenrechners (10 Min.)
 
 
 In dieser exemplarischen Vorgehensweise verwenden Sie den Gesamtkostenrechner, um einen Kostenvergleichsbericht für eine lokale Umgebung zu erstellen.
 
-**Hinweis:** Diese exemplarische Vorgehensweise enthält Beispieldefinitionen der lokalen Infrastruktur und Workloads für ein typisches Rechenzentrum. Verwenden Sie zum Erstellen eines Gesamtkostenrechner-Berichts die Beispieldefinitionen, oder geben Sie Details Ihrer *tatsächlich* lokalen Infrastruktur und Workloads an.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This walkthrough provides example definitions of on-premises infrastructure and workloads for a typical datacenter. To create a TCO Calculator report, use the example definitions or provide details of your <bpt id="p1">*</bpt>actual<ept id="p1">*</ept> on-premises infrastructure and workloads.
 
 # <a name="task-1-configure-the-tco-calculator"></a>Aufgabe 1: Konfigurieren des Gesamtbetriebskostenrechners
 
@@ -94,6 +88,6 @@ In dieser Aufgabe werden wir die Empfehlungen zur Kosteneinsparung überprüfen 
 
 3. Um eine PDF-Kopie des Berichts zu speichern oder zu drucken, klicken Sie auf **Herunterladen**.
 
-    ![Screenshot des Berichtsbereichs des Gesamtkostenrechners in Azure. Die hervorgehobenen und ausgefüllten Eingabefelder geben an, wie der Zeitraum des Gesamtkostenrechners auf drei Jahre und die Region auf Nordeuropa festgelegt wird. Ein Diagramm zeigt die Kosten für lokale Infrastruktur und Workloads im Vergleich zu den durch die Verwendung von Azure reduzierten Kosten.](../images/2001.png)
+    ![Screenshot of the report pane of the tco calculator in Azure. The highlighted and completed input fields indicates how set the tco calculator timeframe to three years and the region to north europe. A graph shows the cost of on-premises infrastructure and workloads off-set against the reduced cost of using Azure.](../images/2001.png)
 
-Glückwunsch! Sie haben den Gesamtkostenrechner verwendet, um einen Kostenvergleichsbericht für eine lokale Umgebung zu erstellen.
+Congratulations! You have used the TCO Calculator to generate a cost comparison report for an on-premises environment.

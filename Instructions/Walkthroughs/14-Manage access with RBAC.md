@@ -2,12 +2,6 @@
 wts:
   title: 14 – Zugriff mit RBAC verwalten (5 Min.)
   module: 'Module 05: Describe identity, governance, privacy, and compliance features'
-ms.openlocfilehash: 4d1369307dc306a367a8a4cc532774c08c513e85
-ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137907740"
 ---
 # <a name="14---manage-access-with-rbac-5-min"></a>14 – Zugriff mit RBAC verwalten (5 Min.)
 
@@ -21,7 +15,7 @@ In dieser Aufgabe weisen wir die Rolle „Mitwirkender für virtuelle Computer�
 
 2. Suchen Sie auf dem Blatt **Alle Dienste** nach **Ressourcengruppen**, und wählen Sie diese Option aus. Klicken Sie anschließend auf **+ Hinzufügen +Neu +Erstellen**.
 
-3. Erstellen Sie eine neue Ressourcengruppe. Klicken Sie auf **Erstellen**, wenn Sie fertig sind. 
+3. Create a new resource group. Click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> when you are finished. 
 
     | Einstellung | Wert |
     | -- | -- |
@@ -34,11 +28,11 @@ In dieser Aufgabe weisen wir die Rolle „Mitwirkender für virtuelle Computer�
 
 5. **Aktualisieren** Sie die Seite „Ressourcengruppe“, und klicken Sie auf den Eintrag, der die neu erstellte Ressourcengruppe darstellt.
 
-6. Klicken Sie auf das Blatt **Zugriffssteuerung (IAM)** , und wechseln Sie dann auf die Registerkarte **Rollen**. Blättern Sie durch die große Anzahl an Rollendefinitionen, die verfügbar sind. Verwenden Sie die Informationssymbole, um eine Vorstellung von den Berechtigungen der einzelnen Rollen zu erhalten. Beachten Sie, dass es auch Informationen zur Anzahl der Benutzer und Gruppen gibt, die jeder Rolle zugewiesen sind.
+6. Click on the <bpt id="p1">**</bpt>Access control (IAM)<ept id="p1">**</ept> blade, and then switch to the <bpt id="p2">**</bpt>Roles<ept id="p2">**</ept> tab. Scroll through the large number of roles definitions that are available. Use the Informational icons to get an idea of each role's permissions. Notice there is also information on the number of users and groups that are assigned to each role.
 7. 
 ![image](https://user-images.githubusercontent.com/89808319/144266949-f19d91ab-31d6-4c8b-af36-c00035925cf0.png)
 
-7. Wechseln Sie zur Registerkarte **Rollenzuweisungen** des Blatts **myRGRBAC - Zugriffssteuerung (IAM)** , klicken Sie auf **Hinzufügen** und dann auf **Rollenzuweisung hinzufügen**. Suchen Sie nach der Rolle „Mitwirkender für virtuelle Computer“, und wählen Sie die Rolle aus. Wechseln Sie zur Registerkarte „Mitglieder“, und legen Sie den Zugriff fest auf: Benutzer, Gruppe oder Dienstprinzipal. Klicken Sie dann auf „+ Mitglieder auswählen“, geben Sie Ihren Namen in die Popupsuchfunktion ein, und klicken Sie auf „Auswählen“. Klicken Sie dann auf „Überprüfen und zuweisen“.
+7. Switch to the <bpt id="p1">**</bpt>Role assignments<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>myRGRBAC - Access control (IAM)<ept id="p2">**</ept> blade, click <bpt id="p3">**</bpt>+ Add<ept id="p3">**</ept> and then click <bpt id="p4">**</bpt>Add role assignment<ept id="p4">**</ept>. Search for the Virtual Machine Contributor role and select. Switch to the "Members" tab and Assign access to: User, group, or service principal. Then click + Select members and type in your name to the popup search function and hit 'select.' Then hit 'Review and Assign'
 
     
     ![image](https://user-images.githubusercontent.com/89808319/144266255-3a0f8574-9358-4c21-8f95-3503747e77c8.png)
@@ -67,7 +61,7 @@ In dieser Aufgabe werden wir anhand des Aktivitätsprotokolls die Rollenzuweisun
 
     **Hinweis:** Wissen Sie, wie Sie Ihre Rollenzuweisung entfernen können?
 
-Glückwunsch! Sie haben eine Ressourcengruppe erstellt, ihr ein Zugriffsrolle zugewiesen und die Aktivitätsprotokolle geöffnet. 
+Congratulations! You created a resource group, assigned an access role to it and viewed activity logs. 
 
-**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
 

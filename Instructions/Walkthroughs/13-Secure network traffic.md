@@ -2,12 +2,6 @@
 wts:
   title: 13 – Sicherer Netzwerkdatenverkehr (10 Min.)
   module: 'Module 04: Describe general security and network security features'
-ms.openlocfilehash: 27216b913111de76e00546319b56f69034819918
-ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137907975"
 ---
 # <a name="13---secure-network-traffic-10-min"></a>13 – Sicherer Netzwerkdatenverkehr (10 Min.)
 
@@ -49,15 +43,15 @@ In dieser Aufgabe erstellen wir einen virtuellen Windows Server 2019 Datacenter
 
 6. Übernehmen Sie die verbleibenden Standardeinstellungen, und klicken Sie dann auf die Schaltfläche **Überprüfen + erstellen** am unteren Rand der Seite.
 
-7. Sobald die Validierung bestanden ist, klicken Sie auf die Schaltfläche **Erstellen**. Es kann etwa fünf Minuten dauern, den virtuellen Computer bereitzustellen.
+7. Once Validation is passed click the <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> button. It can take about five minutes to deploy the virtual machine.
 
-8. Überwachen Sie die Bereitstellung. Das Erstellen der Ressourcengruppe und des virtuellen Computers kann einige Minuten dauern. 
+8. Monitor the deployment. It may take a few minutes for the resource group and virtual machine to be created. 
 
 9. Klicken Sie im Bereitstellungsblatt oder im Infobereich auf **Zu Ressource wechseln**. 
 
 10. Klicken Sie auf dem Blatt **SimpleWinVM** des virtuellen Computers auf **Netzwerk**, und überprüfen Sie die Registerkarte **Regeln für eingehende Ports**. Beachten Sie, dass der Netzwerkschnittstelle des virtuellen Computers oder dem Subnetz, an das die Netzwerkschnittstelle angeschlossen ist, keine Netzwerksicherheitsgruppe zugeordnet ist.
 
-    **Hinweis:** Identifizieren Sie den Namen der Netzwerkschnittstelle. Sie werden dies in der nächsten Aufgabe benötigen.
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Identify the name of the network interface. You will need it in the next task.
 
 # <a name="task-2-create-a-network-security-group"></a>Aufgabe 2: Erstellen einer Netzwerksicherheitsgruppe
 
@@ -90,14 +84,14 @@ In dieser Aufgabe lassen Sie RDP-Datenverkehr für den virtuellen Computer zu, i
 
 2. Klicken Sie im Bereich **Übersicht** auf **Verbinden**.
 
-3. Versuchen Sie, sich mit dem virtuellen Computer zu verbinden, indem Sie RDP auswählen und die RDP-Datei herunterladen und ausführen. Standardmäßig erlaubt die Netzwerksicherheitsgruppe kein RDP. Schließen Sie das Fehlerfenster. 
+3. Attempt to connect to the virtual machine by selecting RDP and downloading an running the RDP file. By default the network security group does not allow RDP. Close the error window. 
 
 
     ![Screenshot der Fehlermeldung, die besagt, dass die Verbindung zum virtuellen Computer fehlgeschlagen ist.](../images/1201.png)
 
 4. Scrollen Sie auf dem Blatt des virtuellen Computers nach unten zum Abschnitt **Einstellungen**, und klicken Sie auf **Netzwerk**. Beachten Sie, dass die Eingangsregeln für die Netzwerksicherheitsgruppe **myNSGSecure (angeschlossen an Netzwerkschnittstelle: myVMNic)** den gesamten eingehenden Datenverkehr mit Ausnahme des Datenverkehrs innerhalb des virtuellen Netzwerks und der Lastenausgleichstests verweigern.
 
-5. Klicken Sie auf der Registerkarte **Regeln für eingehende Ports** auf **Regel für eingehende Ports hinzufügen**. Klicken Sie auf **Hinzufügen**, wenn Sie fertig sind. 
+5. On the <bpt id="p1">**</bpt>Inbound port rules<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add inbound port rule<ept id="p2">**</ept> . Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are done. 
 
     | Einstellung | Wert |
     | -- | -- |
@@ -110,7 +104,7 @@ In dieser Aufgabe lassen Sie RDP-Datenverkehr für den virtuellen Computer zu, i
     | Priorität | **300** |
     | Name | **AllowRDP** |
 
-6. Wählen Sie **Hinzufügen** aus, warten Sie, bis die Regel bereitgestellt wurde, und versuchen Sie dann erneut, sich per RDP mit dem virtuellen Computer zu verbinden, indem Sie zu **Verbinden** zurückkehren. Dieses Mal sollte die Verbindung erfolgreich hergestellt werden. Denken Sie daran, der Benutzername ist **azureuser**, und das Kennwort lautet **Pa$$w0rd1234**.
+6. Select <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> and wait for the rule to be provisioned and then try again to RDP into the virtual machine by going back to <bpt id="p2">**</bpt>Connect<ept id="p2">**</ept> This time you should be successful. Remember the user is <bpt id="p1">**</bpt>azureuser<ept id="p1">**</ept> and the password is <bpt id="p2">**</bpt>Pa$$w0rd1234<ept id="p2">**</ept>.
 
 # <a name="task-4-configure-an-outbound-security-port-rule-to-deny-internet-access"></a>Aufgabe 4: Konfigurieren einer Sicherheitsregel für ausgehende Ports zum Verweigern des Internetzugriffs
 
@@ -120,7 +114,7 @@ In dieser Aufgabe erstellen wir eine NSG-Regel für ausgehende Ports, die den In
 
 2. Öffnen Sie nach dem Start des Computers den **Internet Explorer**-Browser. 
 
-3. Stellen Sie sicher, dass Sie auf **https://www.bing.com** zugreifen können, und schließen Sie dann Internet Explorer. Sie müssen sich durch die erweiterten Sicherheits-Popups im IE durcharbeiten. 
+3. Verify that you can access <bpt id="p1">**</bpt><ph id="ph1">https://www.bing.com</ph><ept id="p1">**</ept> and then close Internet Explorer. You will need to work through the IE enhanced security pop-ups. 
 
     **Hinweis:** Wir konfigurieren nun eine Regel, um den ausgehenden Internetzugang zu verweigern. 
 
@@ -128,9 +122,9 @@ In dieser Aufgabe erstellen wir eine NSG-Regel für ausgehende Ports, die den In
 
 5. Klicken Sie unter **Einstellungen** auf **Netzwerk** und dann auf **Regeln für ausgehende Ports**.
 
-6. Beachten Sie, dass es die Regel **AllowInternetOutbound** gibt. Dies ist eine Standardregel und kann nicht entfernt werden. 
+6. Notice there is a rule, <bpt id="p1">**</bpt>AllowInternetOutbound<ept id="p1">**</ept>. This a default rule and cannot be removed. 
 
-7. Klicken Sie auf **Regel für ausgehende Ports hinzufügen** rechts von der Netzwerksicherheitsgruppe **myNSGSecure (angeschlossen an Netzwerkschnittstelle: myVMNic)** , und konfigurieren Sie eine neue ausgehende Sicherheitsregel mit einer höheren Priorität, die Internetdatenverkehr verweigert. Klicken Sie auf **Hinzufügen**, wenn Sie fertig sind. 
+7. Click <bpt id="p1">**</bpt>Add outbound port rule<ept id="p1">**</ept> to the right of the <bpt id="p2">**</bpt>myNSGSecure  (attached to network interface: myVMNic)<ept id="p2">**</ept> network security group and configure a new outbound security rule with a higher priority that will deny internet traffic. Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are finished. 
 
     | Einstellung | Wert |
     | -- | -- |
@@ -146,6 +140,6 @@ In dieser Aufgabe erstellen wir eine NSG-Regel für ausgehende Ports, die den In
 
 8. Klicken Sie auf **Hinzufügen**. Kehren Sie zur VM zurück, mit der Sie per RDP verbunden sind. 
 
-9. Navigieren Sie zu **https://www.microsoft.com**. Die Seite sollte nicht angezeigt werden. Möglicherweise müssen Sie sich durch zusätzliche erweiterte Sicherheits-Popups im IE durcharbeiten.  
+9. Browse to <bpt id="p1">**</bpt><ph id="ph1">https://www.microsoft.com</ph><ept id="p1">**</ept>. The page should not display. You may need to work through additional IE enhanced security pop-ups.  
 
-**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.

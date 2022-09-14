@@ -2,12 +2,6 @@
 wts:
   title: 17 – Erstellen einer Azure-Richtlinie (10 Min.)
   module: 'Module 05: Describe identity, governance, privacy, and compliance features'
-ms.openlocfilehash: 2811044ec560b0ac42f49a578666ed1694feb32a
-ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137907934"
 ---
 # <a name="17---create-an-azure-policy-10-min"></a>17 – Erstellen einer Azure-Richtlinie (10 Min.)
 
@@ -19,9 +13,9 @@ In dieser Aufgabe konfigurieren wir die zulässige Standortrichtlinie und weisen
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
 
-2. Suchen Sie auf dem Blatt **Alle Dienste** nach **Richtlinie**, und wählen Sie sie diese Option aus. Klicken Sie im Abschnitt **Dokumenterstellung** auf **Definitionen**.  Nehmen Sie sich einen Moment Zeit, um die Liste der integrierten Richtliniendefinitionen zu überprüfen. Wählen Sie zum Beispiel in der Dropdownliste **Kategorie** nur **Compute** aus. Mit der Definition **Zulässige SKUs für virtuelle Computer** können Sie eine Reihe von SKUs für virtuelle Computer angeben, die Ihre Organisation bereitstellen kann.
+2. From the <bpt id="p1">**</bpt>All services<ept id="p1">**</ept> blade, search for and select <bpt id="p2">**</bpt>Policy<ept id="p2">**</ept>, under the <bpt id="p3">**</bpt>Authoring<ept id="p3">**</ept> section click <bpt id="p4">**</bpt>Definitions<ept id="p4">**</ept>.  Take a moment to review the list of built-in policy definitions. For example, in the <bpt id="p1">**</bpt>Category<ept id="p1">**</ept> drop-down select only <bpt id="p2">**</bpt>Compute<ept id="p2">**</ept>. Notice the <bpt id="p1">**</bpt>Allowed virtual machine size SKUs<ept id="p1">**</ept> definition enables you to specify a set of virtual machine SKUs that your organization can deploy.
 
-3. Wechseln Sie zurück zur Seite **Richtlinie**, und klicken Sie im Abschnitt **Dokumenterstellung** auf **Aufgaben**. Eine Zuweisung ist eine zugewiesene Richtlinie, die innerhalb eines bestimmten Bereichs angewendet werden soll. Beispielsweise könnte dem Abonnementbereich eine Definition zugewiesen werden. 
+3. Return to the <bpt id="p1">**</bpt>Policy<ept id="p1">**</ept> page, under the <bpt id="p2">**</bpt>Authoring<ept id="p2">**</ept> section click <bpt id="p3">**</bpt>Assignments<ept id="p3">**</ept>. An assignment is a policy that has been assigned to take place within a specific scope. For example, a definition could be assigned to the subscription scope. 
 
 4. Klicken Sie auf **Richtlinie zuweisen** im oberen Bereich der Seite **Richtlinie - Aufgaben**.
 
@@ -34,11 +28,11 @@ In dieser Aufgabe konfigurieren wir die zulässige Standortrichtlinie und weisen
     | Zuweisungsname | **Zulässige Standorte** |
     
     ![Screenshot des Bereichs „Bereich“ mit ausgefüllten Feldwerten und hervorgehobener Schaltfläche „Auswählen“. ](../images/1402.png)
-6. Wählen Sie auf der Registerkarte **Parameter** die Option **Japan, Westen** aus. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**.
+6. On the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> tab, select <bpt id="p2">**</bpt>Japan West<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
 
-    **Hinweis:** Ein Bereich bestimmt, für welche Ressourcen oder Gruppen von Ressourcen die Richtlinienzuweisung gilt. In unserem Fall könnten wir diese Richtlinie einer bestimmten Ressourcengruppe zuweisen. Wir haben uns jedoch dafür entschieden, die Richtlinie auf Abonnementebene zuzuweisen. Beachten Sie, dass Ressourcen basierend auf der Bereichskonfiguration ausgeschlossen werden können. Ausschlüsse sind optional.
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A scope determines what resources or grouping of resources the policy assignment applies to. In our case we could assign this policy to a specific resource group, however we chose to assign the policy at subscription level. Be aware that resources can be excluded based on the scope configuration. Exclusions are optional.
 
-    **Hinweis:** Die Richtliniendefinition **Zulässige Standorte** gibt einen Speicherort an, an dem alle Ressourcen bereitgestellt werden müssen. Wenn ein anderer Speicherort ausgewählt wird, ist die Bereitstellung nicht zulässig. Weitere Informationen finden Sie auf der Seite [Azure Policy-Beispiele](https://docs.microsoft.com/en-us/azure/governance/policy/samples/index).
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This <bpt id="p2">**</bpt>Allowed Locations<ept id="p2">**</ept> policy definition will specify a location into which all resources must be deployed. If a different location is chosen, deployment will not be allowed. For more information view the <bpt id="p1">[</bpt>Azure Policy Samples<ept id="p1">](https://docs.microsoft.com/en-us/azure/governance/policy/samples/index)</ept> page.
 
    ![Screenshot des Bereichs „Verfügbare Definitionen“ mit verschiedenen hervorgehobenen Feldern und ausgewählter Option „Überwachungs-VMs, die keine verwalteten Datenträger verwenden“.](../images/1403.png)
 
@@ -50,7 +44,7 @@ In dieser Aufgabe testen wir die Richtlinie für zulässige Standorte.
 
 1. Suchen Sie im Azure-Portal auf dem Blatt **Alle Dienste** nach **Speicherkonten**, und wählen Sie diese Option aus. Klicken Sie anschließend auf **+ Erstellen**.
 
-2. Konfigurieren Sie das Speicherkonto (ersetzen Sie **xxxx** im Namen des Speicherkontos durch Buchstaben und Ziffern, sodass der Name global eindeutig ist). Belassen Sie ansonsten die Standardeinstellungen. 
+2. Configure the storage account (replace <bpt id="p1">**</bpt>xxxx<ept id="p1">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else. 
 
     | Einstellung | Wert | 
     | --- | --- |
@@ -73,20 +67,20 @@ Wir werden die Richtlinienzuweisung löschen, um sicherzustellen, dass wir bei z
 
     **Hinweis:** Auf dem Blatt **Richtlinie** können Sie den Konformitätszustand der verschiedenen Richtlinien anzeigen, die Sie zugewiesen haben.
 
-    **Hinweis:** Mit der Richtlinie „Zulässiger Standort“ werden möglicherweise nicht konforme Ressourcen angezeigt. In diesem Fall handelt es sich um Ressourcen, die vor der Richtlinienzuweisung erstellt wurden.
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The Allowed location policy may show non-compliant resources. If so, these are resources created prior to the policy assignment.
  
 2. Klicken Sie auf **Zulässige Standorte**. Daraufhin wird Fenster für die Richtlinieneinhaltung der zulässigen Standorte geöffnet.
 
-3. Klicken Sie im obersten Menü auf **Zuweisung löschen**. Bestätigen Sie, dass Sie die Richtlinienzuweisung löschen möchten, indem Sie auf **Ja** klicken.
+3. Suchen Sie auf dem Blatt **Alle Dienste** nach **Richtlinie**, und wählen Sie sie diese Option aus. Klicken Sie im Abschnitt **Dokumenterstellung** auf **Definitionen**.
 
    ![Screenshot des Menüelements „Zuweisung löschen“.](../images/1407.png)
 
 4. Versuchen Sie, ein anderes Speicherkonto zu erstellen, um sicherzustellen, dass die Richtlinie nicht mehr gültig ist.
 
     **Hinweis:** Häufige Szenarien, in denen die Richtlinie **Zulässige Standorte** nützlich sein kann, wären: 
-    - *Kostenverfolgung*: Sie können unterschiedliche Abonnements für unterschiedliche regionale Standorte haben. Die Richtlinie wird sicherstellen, dass alle Ressourcen in der vorgesehenen Region bereitgestellt werden, um die Kostenverfolgung zu unterstützen. 
+    - Nehmen Sie sich einen Moment Zeit, um die Liste der integrierten Richtliniendefinitionen zu überprüfen. 
     - *Compliance mit Datenresidenz- und Sicherheitsanforderungen*: Sie können auch Anforderungen an die Datenresidenz haben und Abonnements pro Kunde oder bestimmten Workloads erstellen und festlegen, dass alle Ressourcen in einem bestimmten Rechenzentrum bereitgestellt werden müssen, um die Complianceanforderungen bezüglich Daten und Sicherheit zu erfüllen.
 
-Glückwunsch! Sie haben eine Azure-Richtlinie erstellt, die die Bereitstellung von Azure-Ressourcen auf ein bestimmtes Rechenzentrum beschränkt.
+Wählen Sie zum Beispiel in der Dropdownliste **Kategorie** nur **Compute** aus.
 
-**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
+Mit der Definition **Zulässige SKUs für virtuelle Computer** können Sie eine Reihe von SKUs für virtuelle Computer angeben, die Ihre Organisation bereitstellen kann.

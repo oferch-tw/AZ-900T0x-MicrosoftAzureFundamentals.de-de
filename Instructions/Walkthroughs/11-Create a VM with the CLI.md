@@ -2,12 +2,6 @@
 wts:
   title: 11 – Erstellen eines virtuellen Computers mithilfe der CLI (10 Min.)
   module: 'Module 03: Describe core solutions and management tools'
-ms.openlocfilehash: 6e88e520011ccf4f1d02fd14038a457226492082
-ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137907999"
 ---
 # <a name="11---create-a-vm-with-the-cli-10-min"></a>11 – Erstellen eines virtuellen Computers mithilfe der CLI (10 Min.)
 
@@ -25,7 +19,7 @@ In dieser Aufgabe konfigurieren wir Cloud Shell und verwenden Azure CLI, um eine
    
 3. Wenn Sie im Willkommensdialog für Azure Cloud Shell dazu aufgefordert werden, entweder **Bash** oder **PowerShell** auszuwählen, wählen Sie **Bash** aus. 
 
-4. Ein neues Fenster mit der Meldung **Cloudshell** wird geöffnet. Wählen Sie **Erweiterte Einstellungen** aus.
+4. A new window will open stating <bpt id="p1">**</bpt>You have no storage mounted<ept id="p1">**</ept>. Select <bpt id="p1">**</bpt>advanced settings<ept id="p1">**</ept>.
 
 5. Füllen Sie in den erweiterten Einstellungen die folgenden Felder aus, und klicken Sie auf „Speicher erstellen“:
     - Ressourcengruppe: **Neue Ressourcengruppe erstellen**
@@ -48,7 +42,7 @@ In dieser Aufgabe verwenden wir Azure CLI, um eine Ressourcengruppe und einen vi
     az group list --output table
     ```
 
-4. Geben Sie in Cloud Shell den folgenden Befehl ein, und stellen Sie sicher, dass auf jede Zeile mit Ausnahme der letzten Zeile ein umgekehrter Schrägstrich (`\`) folgt. Wenn Sie den gesamten Befehl in derselben Zeile eingeben, verwenden Sie keine umgekehrten Schrägstriche. 
+4. In Cloud Shell enter the command below and make sure that each line, except for the last one, is followed by the backslash (<ph id="ph1">`\`</ph>) character. If you type the whole command on the same line, do not use any backslash characters. 
 
     ```cli
     az vm create \
@@ -62,7 +56,7 @@ In dieser Aufgabe verwenden wir Azure CLI, um eine Ressourcengruppe und einen vi
 
     >**Hinweis:** Wenn Sie die Befehlszeile auf einem Windows-Computer verwenden, ersetzen Sie den umgekehrten Schrägstrich (`\`) durch das Caretzeichen (`^`).
 
-    **Hinweis:** Die Ausführung des Befehls dauert 2 bis 3 Minuten. Der Befehl erstellt einen virtuellen Computer und verschiedene damit verbundene Ressourcen wie Speicher-, Netzwerk- und Sicherheitsressourcen. Fahren Sie mit dem nächsten Schritt erst dann fort, wenn die Bereitstellung des virtuellen Computers abgeschlossen ist. 
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The command will take 2 to 3 minutes to complete. The command will create a virtual machine and various resources associated with it such as storage, networking and security resources. Do not continue to the next step until the virtual machine deployment is complete. 
 
 5. Wenn der Befehl ausgeführt wurde, schließen Sie im Browserfenster den Cloud Shell-Bereich.
 
@@ -79,19 +73,19 @@ In dieser Aufgabe üben wir das Ausführen von CLI-Befehlen über Cloud Shell.
 
 2. Stellen Sie sicher, dass **Bash** im Dropdownmenü oben links im Cloud Shell-Bereich ausgewählt ist.
 
-3. Rufen Sie Informationen zu dem von Ihnen bereitgestellten virtuellen Computer ab, einschließlich Name, Ressourcengruppe, Ort und Status. Beachten Sie, dass der Energiestatus **Wird ausgeführt** lautet.
+3. Retrieve information about the virtual machine you provisioned, including name, resource group, location, and status. Notice the PowerState is <bpt id="p1">**</bpt>running<ept id="p1">**</ept>.
 
     ```cli
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
     ```
 
-4. Beenden Sie den virtuellen Computer. Beachten Sie die Meldung, dass die Abrechnung weiterläuft, bis die Zuordnung des virtuellen Computers aufgehoben wird. 
+4. Stop the virtual machine. Notice the message that billing continues until the virtual machine is deallocated. 
 
     ```cli
     az vm stop --resource-group myRGCLI --name myVMCLI
     ```
 
-5. Überprüfen Sie den Status Ihres virtuellen Computers. Der Energiestatus sollte jetzt **Beendet** lauten.
+5. Verify your virtual machine status. The PowerState should now be <bpt id="p1">**</bpt>stopped<ept id="p1">**</ept>.
 
     ```cli
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
@@ -105,7 +99,7 @@ In dieser Aufgabe überprüfen wir die Empfehlungen von Azure Advisor.
 
 1. Suchen Sie auf Blatt **Alle Dienste** nach **Advisor**, und wählen Sie diese Option aus. 
 
-2. Wählen Sie auf dem Blatt **Advisor** den Eintrag **Überblick** aus. Beachten Sie, dass Empfehlungen nach Zuverlässigkeit, Sicherheit, Leistung und Kosten gruppiert sind. 
+2. On the <bpt id="p1">**</bpt>Advisor<ept id="p1">**</ept> blade, select <bpt id="p2">**</bpt>Overview<ept id="p2">**</ept>. Notice recommendations are grouped by Reliability, Security, Performance, and Cost. 
 
     ![Screenshot der Seite „Advisor-Übersicht“. ](../images/1103.png)
 
@@ -121,6 +115,6 @@ In dieser Aufgabe überprüfen wir die Empfehlungen von Azure Advisor.
 
 6. Wenn Sie Zeit haben, experimentieren Sie weiter mit Azure CLI. 
 
-Glückwunsch! Sie haben Cloud Shell konfiguriert, einen virtuellen Computer mit Azure CLI erstellt, Azure CLI-Befehle geübt und Advisor-Empfehlungen angesehen.
+Congratulations! You have configured Cloud Shell, created a virtual machine using Azure CLI, practiced with Azure CLI commands, and viewed Advisor recommendations.
 
-**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
