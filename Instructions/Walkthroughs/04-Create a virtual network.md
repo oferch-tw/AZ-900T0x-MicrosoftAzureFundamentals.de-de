@@ -1,19 +1,19 @@
 ---
 wts:
-    title: '04 - Erstellen eines virtuellen Netzwerks (20 Min.)'
-    module: 'Modul 02 - Azure-Kerndienste (Workloads)'
+  title: 04 – Erstellen eines virtuellen Netzwerks (20 Min.)
+  module: Module 02 - Core Azure Services (Workloads)
 ---
-# 04 – Erstellen eines virtuellen Netzwerks (20 Min.)
+# <a name="04---create-a-virtual-network-20-min"></a>04 – Erstellen eines virtuellen Netzwerks (20 Min.)
 
-In dieser exemplarischen Vorgehensweise erstellen wir ein virtuelles Netzwerk, stellen zwei virtuelle Computer in diesem virtuellen Netzwerk bereit und konfigurieren sie dann so, dass ein virtueller Computer den anderen innerhalb dieses virtuellen Netzwerks pingen kann.
+In dieser exemplarischen Vorgehensweise erstellen wir ein virtuelles Netzwerk, stellen zwei virtuelle Computer in diesem virtuellen Netzwerk bereit, und konfigurieren sie dann so, dass die virtuellen Computer einander innerhalb des virtuellen Netzwerks pingen können.
 
-# Aufgabe 1: Erstellen eines virtuellen Netzwerks 
+# <a name="task-1-create-a-virtual-network"></a>Aufgabe 1: Erstellen eines virtuellen Netzwerks 
 
 In dieser Aufgabe erstellen wir ein virtuelles Netzwerk. 
 
-Hinweis: Bevor Sie mit dem Lab beginnen, deaktivieren Sie sowohl den öffentlichen als auch den privaten Firewall auf Ihrem virtuellen Computer, indem Sie „Startmenü“ > „Einstellungen“ > „Netzwerk und Internet“ > „Windows Firewall suchen“ öffnen.
+Hinweis: Deaktivieren Sie vor Beginn des Labs sowohl die öffentliche als auch die private Firewall auf Ihrem virtuellen Computer, indem Sie „Startmenü > Einstellungen > Netzwerk und Internet > Windows-Firewall“ öffnen.
 
-1. Melden Sie sich beim Azure-Portal an unter: <a href="https://portal.azure.com" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://portal.azure.com</span></a>
+1. Melden Sie sich unter <a href="https://portal.azure.com" target="_blank"><span style="color: #0066cc;" color="#0066cc">https://portal.azure.com</span></a> beim Azure-Portal an.
 
 2. Suchen Sie auf dem Blatt **Alle Dienste** den Eintrag **Virtuelle Netzwerke**, wählen Sie ihn aus, und klicken Sie auf **+ Hinzufügen, + Erstellen, + Neu**. 
 
@@ -21,72 +21,72 @@ Hinweis: Bevor Sie mit dem Lab beginnen, deaktivieren Sie sowohl den öffentlich
 
     | Einstellung | Wert | 
     | --- | --- |
-    | Abonnement | **Standardwert verwenden** |
-    | Ressourcengruppe | **Erstellen einer neuen Ressourcengruppe** |
+    | Subscription | **Standarddaten beibehalten** |
+    | Ressourcengruppe | **Neue Ressourcengruppe erstellen** |
     | Name | **vnet1** |
     | Region | **(USA) USA, Osten** |
     
    
-4. Klicken Sie auf die Schaltfläche **Überprüfen + erstellen**. Stellen Sie sicher, dass die Validierung erfolgreich ist. Klicken Sie anschließend auf „erstellen“, um die Ressource bereitzustellen.
+4. Click the <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> button. Ensure the validation passes. Then hit create to deploy the resource.
 
 
-# Aufgabe 2: Erstellen von zwei virtuellen Computern
+# <a name="task-2-create-two-virtual-machines"></a>Aufgabe 2: Erstellen von zwei virtuellen Computern
 
 In dieser Aufgabe erstellen wir zwei virtuelle Computer im virtuellen Netzwerk. 
 
-1. Suchen Sie auf dem Blatt **Alle Dienste** nach **Virtuelle Computer**, klicken Sie auf **+ Hinzufügen, + Erstellen, + Neu**, und wählen Sie **+ Virtueller Computer** im Dropdownfeld aus. 
+1. Suchen Sie auf dem Blatt **Alle Dienste** nach **Virtuelle Computer**, klicken Sie auf **+ Hinzufügen, +Erstellen, +Neu**, und wählen Sie **Virtueller Computer** im Dropdownfeld aus. 
 
 2. Geben Sie auf der Registerkarte **Grundlagen** die folgenden Informationen ein (belassen Sie ansonsten die Standardeinstellungen):
 
    | Einstellung | Wert | 
    | --- | --- |
-   | Abonnement | **Standardwert verwenden** |
-   | Ressourcengruppe |  **Standard im Dropdownfeld auswählen** |
+   | Subscription | **Standarddaten verwenden** |
+   | Resource group |  **Standard in Dropdownfeld auswählen** |
    | Name des virtuellen Computers | **vm1**|
    | Region | **(USA) USA, Osten** |
-   | Bild | **Windows Server 2019 Datacenter – Gen2** |
-   | Benutzername| **azureuser** |
+   | Image | **Windows Server 2019 Datacenter, Gen2** |
+   | Username| **azureuser** |
    | Kennwort| **Pa$$w0rd1234** |
-   | Öffentliche eingehende Ports| Wählen Sie **Ausgewählte Ports zulassen** aus  |
+   | Öffentliche Eingangsports| Wählen Sie **Ausgewählte Ports zulassen** aus.  |
    | Ausgewählte eingehende Ports| **RDP (3389)** |
    
 
-3. Wählen Sie die Registerkarte **Netzwerk** aus. Vergewissern sie sich, dass sich der virtuelle Computer im virtuellen Netzwerk **vnet1** befindet. Überprüfen Sie die Standardeinstellungen, nehmen Sie jedoch keine weiteren Änderungen vor. 
+3. Select the <bpt id="p1">**</bpt>Networking<ept id="p1">**</ept> tab. Make sure the virtual machine is placed in the <bpt id="p2">**</bpt>vnet1<ept id="p2">**</ept> virtual network. Review the default settings, but do not make any other changes. 
 
-4. Klicken Sie auf **Überprüfen + erstellen**. Klicken Sie nach Abschluss der Validierung auf **Erstellen**. Die Bereitstellungszeiten können variieren, die Bereitstellung kann jedoch im Allgemeinen zwischen drei und sechs Minuten dauern.
+4. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>. After the Validation passes, click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>. Deployment times can vary but it can generally take between three to six minutes to deploy.
 
 5. Überwachen Sie Ihre Bereitstellung, fahren Sie jedoch mit dem nächsten Schritt fort. 
 
-6. Erstellen Sie einen zweiten virtuellen Computer, indem Sie die oben genannten Schritte **2 bis 4** wiederholen. Achten Sie darauf, dass der virtuelle Computer einen anderen Namen hat, sich im gleichen virtuellen Netzwerk befindet und eine neue öffentliche IP-Adresse verwendet:
+6. Create a second virtual machine by repeating steps <bpt id="p1">**</bpt>2 to 4<ept id="p1">**</ept> above. Make sure you use a different virtual machine name, that the virtual machine is in the same virtual network, and is using a new public IP address:
 
     | Einstellung | Wert |
     | --- | --- |
-    | Ressourcengruppe | **Standard in Dropdownfeld auswählen (wie bei Aufgabe 1-3 und Aufgabe 2-2)** |
-    | Name des virtuellen Computers |  **vm2** |
+    | Resource group | **Standard in Dropdownmenü auswählen (wie bei Aufgabe 1-3 und Aufgabe 2-2)** |
+    | Name des virtuellen Computers |  **VM2** |
     | Virtuelles Netzwerk | **vnet1** |
     | Öffentliche IP-Adresse | **vm2-ip** |
 
-7. Warten Sie, bis beide virtuelle Computer bereitgestellt wurden und mit dem Status *Wird ausgeführt* angezeigt werden.
+7. Warten Sie, bis beide virtuelle Computer bereitgestellt wurden und der Status als *Wird ausgeführt* angezeigt wird.
 
-# Aufgabe 3: Testen der Verbindung 
+# <a name="task-3-test-the-connection"></a>Aufgabe 3: Testen der Verbindung 
 
-In dieser Aufgabe überprüfen wir mit einem Ping, ob die virtuellen Computer miteinander kommunizieren können. Falls nicht, werden wir eine Regel installieren, um eine ICMP-Verbindung zu erlauben. ICMP-Verbindungen werden normalerweise automatisch blockiert.
+In this task, we will try to test whether the virtual machines can communicate (ping) each other. If not we will install a rule to allow an ICMP connection. Usually ICMP connections are automatically blocked.
 
-1. Suchen Sie auf dem Blatt **Alle Ressourcen** nach **vm1**, öffnen Sie das zugehörige Blatt **Übersicht**, und stellen Sie sicher, dass für **Status Wird ausgeführt** angezeigt wird. Möglicherweise müssen Sie die Seite **Aktualisieren**.
+1. From the <bpt id="p1">**</bpt>All resources<ept id="p1">**</ept> blade, search for <bpt id="p2">**</bpt>vm1<ept id="p2">**</ept>, open its <bpt id="p3">**</bpt>Overview<ept id="p3">**</ept> blade, and make sure its <bpt id="p4">**</bpt>Status<ept id="p4">**</ept> is <bpt id="p5">**</bpt>Running<ept id="p5">**</ept>. You may need to <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> the page.
 
-2. Wählen Sie auf dem Blatt **Überblick** die Option **Verbinden** aus, und wählen Sie **RDP** im Dropdownfeld aus.
+2. Wählen Sie auf dem Blatt **Übersicht** die Option **Verbinden** aus, und wählen Sie dann **RDP** im Dropdownfeld aus.
 
-    **HINWEIS**: In den folgenden Anweisungen erfahren Sie, wie Sie von einem Windows-Computer aus eine Verbindung zu Ihrem virtuellen Computer herstellen. 
+    **Hinweis:** In den folgenden Anweisungen erfahren Sie, wie Sie von einem Windows-Computer aus eine Verbindung zu Ihrem virtuellen Computer herstellen. 
 
-3. Übernehmen Sie auf dem Blatt **Mit RDP verbinden** die Standardoptionen, um sich mit der IP-Adresse und Port 3389 zu verbinden, und klicken Sie auf **RDP-Datei herunterladen**.
+3. Behalten Sie auf dem Blatt **Verbindung herstellen über RDP** die Standardoptionen für die Verbindung per IP-Adresse über Port 3389 bei, und klicken Sie auf **RDP-Datei herunterladen**.
 
-4. Öffnen Sie die heruntergeladene RDP-Datei (links unten in Ihrer VM), und klicken Sie auf **Verbinden**, wenn Sie dazu aufgefordert werden. 
+4. Öffnen Sie die heruntergeladene RDP-Datei (unten links in Ihrer VM), und klicken Sie auf **Verbinden**, wenn Sie dazu aufgefordert werden. 
 
-5. Geben Sie im Fenster **Windows-Sicherheit** den Benutzernamen **azureuser** und das Kennwort **Pa$$w0rd1234** ein, und klicken Sie dann auf **OK**.
+5. Geben Sie im Fenster **Windows-Sicherheit** den Benutzernamen **azureuser** und das Kennwort **Pa$$$w0rd1234** ein, und klicken Sie dann auf **OK**.
 
-6. Möglicherweise erhalten Sie während des Anmeldevorgangs eine Zertifikatwarnung. Klicken Sie auf **Ja**, um die Verbindung herzustellen und sich mit Ihrer bereitgestellten VM zu verbinden. Die Verbindung sollte erfolgreich hergestellt werden. Schließen Sie den Windows Server und das Dashboard-Fenster, das geöffnet wurde. Jetzt sollte ein blauer Windows-Hintergrund angezeigt werden. Sie befinden sich jetzt auf Ihrem virtuellen Computer.
+6. You may receive a certificate warning during the sign-in process. Click <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> to create the connection and connect to your deployed VM. You should connect successfully. Close the Windows Server and Dashboard windows that pop up. You should see a Blue Windows background. You are now in your virtual machine.
 
-7. Deaktivieren Sie auf Ihrem neu erstellen virtuellen Computer sowohl den öffentlichen als auch den privaten Firewall, indem Sie „Startmenü“ > „Einstellungen“ > „Netzwerk und Internet“ > „Windows Firewall suchen“ öffnen.
+7. Stellen Sie auf **beiden** neu erstellten virtuellen Computern über RDP eine Verbindung her, und deaktivieren Sie die öffentliche und die private Firewall, indem Sie die „Startmenü > Einstellungen > Netzwerk und Internet-> Windows-Firewall“ öffnen.
 
 8. Öffnen Sie PowerShell auf dem virtuellen Computer, indem Sie auf die Schaltfläche **Start** klicken, **PowerShell** in das Suchfeld eingeben, mit der rechten Maustaste auf **Windows PowerShell** klicken und **Als Administrator ausführen** auswählen.
 
@@ -96,9 +96,9 @@ In dieser Aufgabe überprüfen wir mit einem Ping, ob die virtuellen Computer mi
    ping vm2
    ```
 
-10. Der Ping sollte erfolgreich sein. Sie haben einen Ping von vm1 an vm2 gesendet.
+ 10. You should be successful. You have pinged VM2 from VM1.
 
 
-**Herzlichen Glückwunsch!** Sie haben zwei virtuelle Computer in einem virtuellen Netzwerk konfiguriert und bereitgestellt und eine Verbindung zwischen den Computern hergestellt.
+<bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have configured and deployed two virtual machines in a virtual network, and then you were able to connect them.
 
-**HINWEIS**: Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe, und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.

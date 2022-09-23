@@ -1,15 +1,15 @@
 ---
 wts:
-    title: '07 - Implementieren eines Azure IoT Hub (10 Min.)'
-    module: 'Modul 03: Kernlösungen und Verwaltungstools beschreiben'
+  title: 07 – Implementieren eines Azure IoT Hubs (10 Min.)
+  module: 'Module 03: Describe core solutions and management tools'
 ---
-# 07 – Implementieren eines Azure IoT Hubs (10 Min.)
+# <a name="07---implement-an-azure-iot-hub-10-min"></a>07 – Implementieren eines Azure IoT Hubs (10 Min.)
 
-In dieser exemplarischen Vorgehensweise konfigurieren wir einen neuen Azure IoT Hub im Azure-Portal und authentifizieren dann eine Verbindung zu einem IoT-Gerät mithilfe des Raspberry Pi-Gerätesimulators. Sensordaten und Nachrichten werden vom Raspberry Pi-Simulator an Ihren Azure IoT Hub übergeben, und Sie sehen Metriken für die Meldungsaktivität im Azure-Portal.
+In this walkthrough, we will configure a new Azure IoT Hub in Azure Portal, and then authenticate a connection to an IoT device using the online Raspberry Pi device simulator. Sensor data and messages are passed from the Raspberry Pi simulator to your Azure IoT Hub, and you view metrics for the messaging activity in Azure Portal.
 
-# Aufgabe 1: Erstellen eines IoT-Hubs 
+# <a name="task-1-create-an-iot-hub"></a>Aufgabe 1: Erstellen eines IoT-Hubs 
 
-In dieser Aufgabe werden wir einen IoT-Hub erstellen. 
+In dieser Aufgabe erstellen wir einen IoT-Hub. 
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
 
@@ -19,64 +19,64 @@ In dieser Aufgabe werden wir einen IoT-Hub erstellen.
 
     | Einstellungen | Wert |
     |--|--|
-    | Abonnement | **Standardwert beibehalten** |
-    | Ressourcengruppe | **Erstellen einer neuen Ressourcengruppe** |
+    | Subscription | **Standarddaten beibehalten** |
+    | Ressourcengruppe | **Neue Ressourcengruppe erstellen** |
     | IoT Hub-Name | **my-hub-groupxxxxx** |
     | Region | **USA, Osten** |
 
-    **Hinweis** - Denken Sie daran, **xxxxx** so zu ändern, dass sich ein eindeutiger **IoT Hub-Name** ergibt.
+    **Hinweis**: Denken Sie daran, **xxxxx** zu ändern, sodass sich ein eindeutiger **IoT Hub-Name** ergibt.
 
-4. Wechseln Sie zur Registerkarte **Verwaltung**, und legen Sie im Dropdownfeld für **Preis- und Skalierungsebene** den Wert **S1: Standardebene**.
+4. Wechseln Sie zur Registerkarte **Verwaltung**, und verwenden Sie das Dropdownfeld, um die **Preis- und Skalierungsebene** festzulegen auf **S1: Standard-Tarif**.
 
-5. Klicken Sie auf die Schaltfläche **Überprüfen + erstellen**.
+5. Klicken Sie auf **Überprüfen + erstellen**.
 
 6. Klicken Sie auf die Schaltfläche **Erstellen**, um mit der Erstellung Ihrer neuen Azure IoT Hub-Instanz zu beginnen.
 
 7. Warten Sie, bis die Azure IoT Hub-Instanz bereitgestellt ist. 
 
-# Aufgabe 2: Hinzufügen eines IoT-Geräts
+# <a name="task-2-add-an-iot-device"></a>Aufgabe 2: Hinzufügen eines IoT-Geräts
 
 In dieser Aufgabe fügen wir dem IoT-Hub ein IoT-Gerät hinzu. 
 
-1. Wenn die Bereitstellung abgeschlossen ist, klicken Sie auf dem Blatt „Bereitstellung“ auf **Zur Ressource wechseln**. Alternativ suchen Sie auf dem Blatt **Alle Dienste** nach **IoT Hub**, wählen diese Option aus und suchen Ihre neue IoT Hub-Instanz
+1. When the deployment has completed, click <bpt id="p1">**</bpt>Go to resource<ept id="p1">**</ept> from the deployment blade. Alternatively, from the <bpt id="p1">**</bpt>All services<ept id="p1">**</ept> blade, search for and select <bpt id="p2">**</bpt>IoT Hub<ept id="p2">**</ept> and locate your new IoT Hub instance
 
-	![Screenshot der Benachrichtigungen „Die Bereitstellung wird ausgeführt“ und „Bereitstellung erfolgreich“ im Azure-Portal.](../images/0601.png)
+    ![Screenshot der Benachrichtigungen „Die Bereitstellung wird ausgeführt“ und „Bereitstellung erfolgreich“ im Azure-Portal.](../images/0601.png)
 
-2. Um ein neues IoT-Gerät hinzuzufügen, scrollen Sie nach unten zum Abschnitt **Geräteverwaltung**, und klicken Sie auf **Geräte**. Klicken Sie auf **+ Gerät hinzufügen**.
+2. To add a new IoT device, scroll down to the <bpt id="p1">**</bpt>Device management<ept id="p1">**</ept> section and click <bpt id="p2">**</bpt>Devices<ept id="p2">**</ept>. Then, click <bpt id="p1">**</bpt>+ Add Device<ept id="p1">**</ept>.
 
-	![Screenshot des Bereichs „IoT-Geräte“, der auf dem IoT Hub-Navigationsblatt im Azure-Portal hervorgehoben ist. Die Schaltfläche „Neu“ ist hervorgehoben, um zu veranschaulichen, wie dem IoT-Hub eine neue IoT-Geräteidentität hinzugefügt wird.](../images/0602.png)
+    ![In dieser exemplarischen Vorgehensweise konfigurieren wir einen neuen Azure IoT Hub im Azure-Portal und authentifizieren dann eine Verbindung zu einem IoT-Gerät mithilfe des Raspberry Pi-Gerätesimulators.](../images/0602.png)
 
-3. Geben Sie einen Namen für Ihr neues IoT-Gerät ein ( **myRaspberryPi**), und klicken Sie auf die Schaltfläche **Speichern**. Dadurch wird eine neue IoT-Geräteidentität in Ihrem Azure IoT Hub erstellt.
+3. Sensordaten und Nachrichten werden vom Raspberry Pi-Simulator an Ihren Azure IoT Hub übergeben, und Sie sehen Metriken für die Meldungsaktivität im Azure-Portal.
 
 4. Wenn Sie Ihr neues Gerät nicht sehen, **Aktualisieren** Sie die Seite „IoT-Geräte“. 
 
-5. Wählen Sie **myRaspberryPi** aus, und kopieren Sie den Wert von **Primäre Verbindungszeichenfolge**. Mit diesem Schlüssel werden Sie in der nächsten Aufgabe eine Verbindung zum Raspberry Pi-Simulator authentifizieren.
+5. Select <bpt id="p1">**</bpt>myRaspberryPi<ept id="p1">**</ept> and copy the <bpt id="p2">**</bpt>Primary Connection String<ept id="p2">**</ept> value. You will use this key in the next task to authenticate a connection to the Raspberry Pi simulator.
 
-	![Screenshot der Seite „Primäre Verbindungszeichenfolge“ mit hervorgehobenem Kopiersymbol.](../images/0603.png)
+    ![Screenshot der Seite „Primäre Verbindungszeichenfolge“ mit hervorgehobenem Kopiersymbol.](../images/0603.png)
 
-# Aufgabe 3: Testen des Geräts mit einem Raspberry Pi-Simulator
+# <a name="task-3-test-the-device-using-a-raspberry-pi-simulator"></a>Aufgabe 3: Testen Sie das Gerät mit einem Raspberry Pi-Simulator.
 
 In dieser Aufgabe testen wir unser Gerät mit dem Raspberry Pi-Simulator. 
 
-1. Öffnen Sie eine neue Registerkarte im Webbrowser, und geben Sie den folgenden Abkürzungs-Link ein: https://aka.ms/RaspPi. Daraufhin gelangen sie zur Website des Raspberry Pi-Simulators. Wenn Sie Zeit haben, machen Sie sich mit dem Raspberry Pi-Simulator vertraut. Wenn Sie fertig sind, wählen Sie „**X**“ aus, um das Popupfenster zu schließen.
+1. Open a new tab in the web browser and type this shortcut link <ph id="ph1">https://aka.ms/RaspPi</ph>. It will take you to a Raspberry Pi Simulator site. If you have time, read about the Raspberry Pi simulator. When done select "<bpt id="p1">**</bpt>X<ept id="p1">**</ept>" to close the pop-up window.
 
-2. Suchen Sie im Codebereich auf der rechten Seite die Zeile mit „const connectionString =“. Ersetzen Sie dies durch die Verbindungszeichenfolge, die Sie aus dem Azure-Portal kopiert haben. Beachten Sie, dass die Verbindungszeichenfolge die Einträge DeviceId (**myRaspberryPi**) und SharedAccessKey enthält.
+2. In the code area on the right side, locate the line with 'const connectionString ='. Replace it with the connection string you copied from the Azure portal. Note that the connection sting includes the DeviceId (<bpt id="p1">**</bpt>myRaspberryPi<ept id="p1">**</ept>) and SharedAccessKey entries.
 
-	![Screenshot des Codierungsbereichs im Raspberry Pi-Simulator.](../images/0604.png)
+    ![Screenshot des Codierungsbereichs im Raspberry Pi-Simulator.](../images/0604.png)
 
-3. Klicken Sie auf **Ausführen** (unterhalb des Codebereichs), um die Anwendung auszuführen. Die Konsolenausgabe sollte die Sensordaten und Nachrichten anzeigen, die vom Raspberry Pi-Simulator an Ihren Azure IoT Hub gesendet werden. Daten und Nachrichten werden jedes Mal gesendet, wenn die Raspberry Pi-Simulator-LED blinkt. 
+3. Click <bpt id="p1">**</bpt>Run<ept id="p1">**</ept> (below the code area) to run the application. The console output should show the sensor data and messages that are sent from the Raspberry Pi simulator to your Azure IoT Hub. Data and messages are sent each time the Raspberry Pi simulator LED flashes. 
 
-	![Screenshot der Raspberry Pi.Simulator-Konsole.  Die Konsolenausgabe zeigt Sensordaten und Nachrichten an, die vom Raspberry Pi-Simulator an Azure IoT Hub gesendet wurden.](../images/0605.png)
+    ![Screenshot of the Raspberry Pi simulator console.  The console output shows sensor data and messages sent from the Raspberry Pi simulator to Azure IoT Hub.](../images/0605.png)
 
 5. Klicken Sie auf **Beenden**, um das Senden von Daten zu beenden.
 
-6. Wechseln Sie zurück zum Azure-Portal.
+6. Kehren Sie zum Azure-Portal zurück.
 
-7. Wechseln Sie zum Blatt **Übersicht** für das IoT Hub, und scrollen Sie nach unten zu den **IoT Hub-Nutzungsdaten**, um die Nutzung anzuzeigen. Ändern Sie den Zeitraum unter **Daten anzeigen für letzte**, um die Daten für die letzte Stunde anzuzeigen.
+7. Switch the IoT Hub <bpt id="p1">**</bpt>Overview<ept id="p1">**</ept> blade and scroll down to the <bpt id="p2">**</bpt>IoT Hub Usage<ept id="p2">**</ept> information to view usage. Change your timeframe in the <bpt id="p1">**</bpt>show data for last<ept id="p1">**</ept> to see data in the last hour.
 
-	![Screenshot der Metriken im IoT-Hub-Nutzungsbereich des Azure-Portals.](../images/0606.png)
+    ![Screenshot der Metriken im IoT-Hub-Nutzungsbereich des Azure-Portals.](../images/0606.png)
 
 
-Herzlichen Glückwunsch! Sie haben Azure IoT Hub so eingerichtet, dass Sensordaten von einem IoT-Gerät erfasst werden.
+Congratulations! You have set up Azure IoT Hub to collect sensor data from an IoT device.
 
-**HINWEIS**: Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe, und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.

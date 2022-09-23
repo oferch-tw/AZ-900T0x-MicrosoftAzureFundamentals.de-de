@@ -1,27 +1,27 @@
 ---
 wts:
-    title: '02 - Erstellen einer Web-App (10 Min.)'
-    module: 'Modul 02 - Azure-Kerndienste (Workloads)'
+  title: 02 – Erstellen einer Web-App (10 Min.)
+  module: Module 02 - Core Azure Services (Workloads)
 ---
-# 02 – Erstellen einer Web-App (10 Min.)
+# <a name="02---create-a-web-app-10-min"></a>02 – Erstellen einer Web-App (10 Min.)
 
-In dieser exemplarischen Vorgehensweise erstellen wir eine Web-App, in der ein Docker-Container ausgeführt wird. Der Docker-Container enthält eine Willkommensnachricht. 
+In this walkthrough, we will create a web app that runs a Docker container. The Docker container contains a Welcome message. 
 
-Azure App Service ist eine Sammlung von vier Diensten, die Sie beim Hosten und Ausführen von Webanwendungen unterstützen. Die vier Dienste (Web-Apps, Mobile Apps, API-Apps und Logic Apps) sehen unterschiedlich aus, funktionieren jedoch letztendlich alle sehr ähnlich. Web-Apps ist der am häufigsten verwendete Dienst der vier Dienste. Diesen Dienst werden wir in diesem Lab verwenden.
+Azure App Service are actually a collection of four services, all of which are built to help you host and run web applications. The four services (Web Apps, Mobile Apps, API Apps, and Logic Apps) look different, but in the end they all operate in very similar ways. Web Apps are the most commonly used of the four services, and this is the service that we will be using in this lab.
 
-# Aufgabe 1: Eine Web-App erstellen 
+# <a name="task-1-create-a-web-app"></a>Aufgabe 1: Erstellen einer Web-App 
 
 In dieser Aufgabe erstellen Sie eine Azure App Service-Web-App. 
 
-1. Melden Sie sich beim [Azure-Portal](http://portal.azure.com/) an. 
+1. Melden Sie sich beim [Azure-Portal](http://portal.azure.com/)an. 
 
 2. Suchen Sie auf dem Blatt **Alle Dienste** den Eintrag **App Services**, wählen Sie ihn aus, und klicken Sie auf **+ Hinzufügen, + Erstellen, + Neu**.
 
-3. Geben Sie auf der Registerkarte **Grundlagen** des Blatts **Web-App** die folgenden Einstellungen an (ersetzen Sie **xxxx** im Namen der Web-App durch Buchstaben und Ziffern, sodass der Name global eindeutig ist). Behalten Sie ansonsten die Standardeinstellungen bei, auch für den App Service-Plan. 
+3. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Web App<ept id="p2">**</ept> blade, specify the following settings (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the web app with letters and digits such that the name is globally unique). Leave the defaults for everything else, including the App Service Plan. 
 
     | Einstellung | Wert |
     | -- | -- |
-    | Abonnement | **Standardwert verwenden** |
+    | Subscription | **Standarddaten verwenden** |
     | Ressourcengruppe | **Neue Ressourcengruppe erstellen**|
     | Name | **myDockerWebAppxxxx** |
     | Veröffentlichen | **Docker-Container** |
@@ -36,31 +36,31 @@ In dieser Aufgabe erstellen Sie eine Azure App Service-Web-App.
     | -- | -- |
     | Optionen | **Einzelner Container** |
     | Imagequelle | **Docker Hub** |
-    | Zugriffstyp | **Öffentlich** |
+    | Zugriffstyp | **Public** |
     | Image und Tag | **mcr.microsoft.com/azuredocs/aci-helloworld** |
     
  **Hinweis:** Der Startupbefehl ist optional und wird in dieser Übung nicht benötigt.
 
-5. Klicken Sie auf **Überprüfen + erstellen**, und klicken Sie dann auf **Erstellen**. 
+5. Klicken Sie auf **Überprüfen und erstellen** und dann auf **Erstellen**. 
 
-# Aufgabe 2: Testen der Web-App
+# <a name="task-2-test-the-web-app"></a>Aufgabe 2: Testen der Web-App
 
 In dieser Aufgabe testen wir die Web-App.
 
-1. Warten Sie, bis die Web-App bereitgestellt ist.
+1. Warten Sie, bis die Web-App bereitgestellt wurde.
 
 2. Klicken Sie in **Benachrichtigungen** auf **Zur Ressource gehen**. 
 
-3. Suchen Sie auf dem Blatt **Überblick** die **URL**. Kopieren Sie die URL in die Zwischenablage.
+3. In dieser exemplarischen Vorgehensweise erstellen wir eine Web-App, in der ein Docker-Container ausgeführt wird.
 
-    ![Screenshot des Web-App-Eigenschaftenblatts. Die URL wird hervorgehoben.](../images/0801.png)
+    ![Der Docker-Container enthält eine Willkommensnachricht.](../images/0801.png)
 
-4. Fügen sie die URL in einem neuen Browserfenster ein, und drücken Sie die Eingabetaste. Die Willkommensnachricht „Willkommen bei Azure Container Instances“ wird angezeigt.
+4. In a new browser window, paste the URl and press enter. The Welcome to Azure Container Instances! welcome message will be displayed.
 
     ![Screenshot der Seite „Willkommen bei Azure Container Instances“.](../images/0802.png)
 
-5. Wechseln Sie zurück zum Blatt **Übersicht** in Ihrer Web-App, und scrollen Sie nach unten. Dort finden Sie verschiedene Diagramme mit ein- und ausgehenden Daten und Anforderungen. Wenn Sie Schritt 4 einige Male wiederholen, sollte die entsprechende Telemetrie in diesen Diagrammen angezeigt werden. Dies umfasst die Anzahl der Anfragen und die durchschnittliche Antwortzeit. 
+5. Azure App Service ist eine Sammlung von vier Diensten, die zum Hosten und Ausführen von Webanwendungen dienen. 
 
-**HINWEIS**: Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe, und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
+Die vier Dienste (Web-Apps, Mobile Apps, API-Apps und Logic Apps) sehen unterschiedlich aus, funktionieren jedoch letztendlich alle sehr ähnlich.
 
-Glückwunsch! Sie haben erfolgreich einen Azure App Service erstellt.
+Herzlichen Glückwunsch! Sie haben erfolgreich einen Azure App Service erstellt.
