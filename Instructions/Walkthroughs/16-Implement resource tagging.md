@@ -19,16 +19,16 @@ In dieser Aufgabe konfigurieren wir die Richtlinie **Einen Tag für Ressourcen a
 
 4. Beachten Sie, dass der **Bereich** für unsere Richtlinie abonnementweit sein wird. 
 
-5. Under <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> Select the <bpt id="p2">**</bpt>Policy definition<ept id="p2">**</ept> ellipsis button (right side of textbox). In the <bpt id="p1">**</bpt>Search<ept id="p1">**</ept> box, enter the value <bpt id="p2">**</bpt>tag<ept id="p2">**</ept>. A list of related Policies with the word <bpt id="p1">**</bpt>tag<ept id="p1">**</ept> will appear. Scroll down till you find the <bpt id="p1">**</bpt>Require a tag and its value on resources<ept id="p1">**</ept> definition, click on it and click <bpt id="p2">**</bpt>Select<ept id="p2">**</ept>.
+5. Wählen Sie unter **Grundlagen** die Schaltfläche **Richtliniendefinition** mit den Auslassungspunkten (rechts neben dem Textfeld) aus. Geben Sie im **Suchfeld** den Wert **tag** ein. Eine Liste der verwandten Richtlinien mit dem Wort **tag** wird angezeigt. Blättern Sie nach unten zur Definition **Tag und zugehöriger Wert für Ressourcen erforderlich**, klicken Sie darauf, und klicken Sie dann auf **Auswählen**.
 
    ![image](https://user-images.githubusercontent.com/89808319/155607579-d564a43e-a9cd-443d-8482-f47879eff2e9.png)
    
-6.  On the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> tab, type in **Company : Contoso ** for the tag key/value pair name. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+6.  Geben Sie auf der Registerkarte **Parameter** den Wert **Company : Contoso ** für den Tagnamen des Schüssel-Wert-Paars ein. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**.
 
   
 
-7. The <bpt id="p1">**</bpt>Require a tag amd its value on resources<ept id="p1">**</ept> policy assignment is now in place. When a resource is created, it must include a tag with the Company : Contoso key.
-   <bpt id="p1">**</bpt>Note - you need to wait up to 30 minutes for the Policy to be applied.<ept id="p1">**</ept> 
+7. Die Richtlinienzuweisung **Tag und zugehöriger Wert für Ressourcen erforderlich** ist jetzt vorhanden. Wenn eine Ressource erstellt wird, muss sie ein Tag mit dem Schlüssel „Company : Contoso“ enthalten.
+   **Hinweis: Es kann bis zu 30 Minuten dauern, bis die Richtlinie übernommen wurde.** 
 
   ![image](https://user-images.githubusercontent.com/89808319/155607357-556646b6-9ca7-4817-a02e-643869b2c4dd.png)
 
@@ -38,7 +38,7 @@ In dieser Aufgabe erstellen wir Speicherkonten, um das erforderliche Tagging zu 
 
 1. Suchen Sie im Azure-Portal auf dem Blatt **Alle Dienste** nach **Speicherkonten**, und wählen Sie diese Option aus. Klicken Sie anschließend auf **+ Hinzufügen +Neu +Erstellen**.
 
-2. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
+2. Geben Sie auf dem Blatt **Speicherkonto erstellen** auf der Registerkarte **Grundlagen** die folgenden Informationen ein (ersetzen Sie **xxxx** im Speicherkontonamen durch Buchstaben und Ziffern, sodass der Name global eindeutig ist). Belassen Sie ansonsten die Standardeinstellungen.
 
     | Einstellung | Wert | 
     | --- | --- |
@@ -49,34 +49,34 @@ In dieser Aufgabe erstellen wir Speicherkonten, um das erforderliche Tagging zu 
 
 3. Klicken Sie auf **Überprüfen + erstellen**. 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We are testing to see what happens when the tag is not supplied. Please note, it can take up to 30 minutes for Policies to take effect.
+    **Hinweis:** Wir testen, was passiert, wenn das Tag nicht angegeben wird. Es kann bis zu 30 Minuten dauern, bis die Richtlinie übernommen wurde.
 
-4. You will receive a Validation failed message. Click the <bpt id="p1">**</bpt>Click here to view details<ept id="p1">**</ept> message. On the <bpt id="p1">**</bpt>Errors<ept id="p1">**</ept> blade, on the <bpt id="p2">**</bpt>Summary<ept id="p2">**</ept> tab note the error message stating that resource was disallowed by Policy.
+4. Sie erhalten eine Meldung, dass die Validierung fehlgeschlagen ist. Klicken Sie auf die Nachricht **Hier klicken, um Details anzuzeigen**. Auf dem Blatt **Fehler** wird auf der Registerkarte **Zusammenfassung** eine Fehlermeldung angezeigt, die besagt, dass die Ressource von der Richtlinie nicht zugelassen wurde.
 
     **Hinweis:** Wenn Sie die Registerkarte „Unformatierter Fehler“ anzeigen, wird der erforderliche spezifische Tagname angezeigt. 
 
     ![Screenshot von „aufgrund eines Richtlinienfehlers nicht zulässig“.](../images/1704.png)
 
 
-5. Close the <bpt id="p1">**</bpt>Error<ept id="p1">**</ept> pane and click <bpt id="p2">**</bpt>Previous<ept id="p2">**</ept> (bottom of the screen). Provide the tagging information. 
+5. Schließen Sie den Bereich **Fehler**, und klicken Sie auf **Zurück** (unterer Bildschirmrand). Geben Sie die Tagging-Informationen an. 
 
     | Einstellung | Wert | 
     | --- | --- |
     | Tagname | **Company:Contoso** (möglicherweise nicht in der Dropdownliste vorhanden) |
 
-6. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and verify that the validation was successful. Click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> to deploy the storage account. 
+6. Klicken Sie auf **Überprüfen + erstellen**, und vergewissern Sie sich, dass die Validierung erfolgreich war. Klicken Sie auf **Erstellen**, um das Speicherkonto bereitzustellen. 
 
 # <a name="task-3-view-all-resources-with-a-specific-tag"></a>Aufgabe 3: Anzeigen aller Ressourcen mit einem bestimmten Tag
 
 1. Suchen Sie im Azure-Portal auf dem Blatt **Alle Dienste** nach **Tags**, und wählen Sie diese Option aus.
 
-2. Note all tags and their values. Click the <bpt id="p1">**</bpt>Company : Contoso<ept id="p1">**</ept> key/value pair. This will display a blade showing the newly created storage account, as long as you included the tag during its deployment. 
+2. Notieren Sie alle Tags und ihre Werte. Klicken Sie auf das Schlüssel-Wert-Paar **Company : Contoso**. Daraufhin wird ein Blatt mit dem neu erstellten Speicherkonto angezeigt, sofern Sie das Tag während der Bereitstellung einbezogen haben. 
 
    ![Screenshot der Tags mit ausgewähltem Unternehmen und Contoso.](../images/1705.png)
 
 3. Zeigen Sie im Portal das Blatt **Alle Ressourcen** an.
 
-4. Click <bpt id="p1">**</bpt>Add filter<ept id="p1">**</ept> and add the <bpt id="p2">**</bpt>Company<ept id="p2">**</ept> tag key as the filter category. With the filter applied, only your storage account will be listed.
+4. Klicken Sie auf **Filter hinzufügen**, und fügen Sie den Tag-Schlüssel **Unternehmen** als Filterkategorie hinzu. Wenn der Filter angewendet wird, wird nur Ihr Speicherkonto aufgelistet.
 
     ![Screenshot des Filters „Alle Ressourcen“ mit ausgewähltem Unternehmen.](../images/1706.png)
 
@@ -94,7 +94,7 @@ In dieser Aufgabe werden wir die Richtlinie **Tag für Ressourcen erforderlich**
 
 5. Wenn Sie Zeit haben, erstellen Sie eine weitere Ressource ohne Tag, um sicherzustellen, dass die Richtlinie nicht mehr gültig ist.
 
-Wählen Sie unter **Grundlagen** die Schaltfläche **Richtliniendefinition** mit den Auslassungspunkten (rechts neben dem Textfeld) aus.
+Herzlichen Glückwunsch! In dieser exemplarischen Vorgehensweise haben wir eine Richtlinienzuweisung erstellt, für die Tagging erforderlich ist, eine Ressource (Speicherkonto) erstellt, die Tagging-Richtlinie getestet, Ressourcen mit einem angegebenen Tag angezeigt und die Tagging-Richtlinie entfernt.
 
 
-Geben Sie im **Suchfeld** den Wert **tag** ein.
+**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.

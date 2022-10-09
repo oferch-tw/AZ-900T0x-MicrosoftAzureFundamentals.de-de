@@ -5,9 +5,9 @@ wts:
 ---
 # <a name="02---create-a-web-app-10-min"></a>02 – Erstellen einer Web-App (10 Min.)
 
-In this walkthrough, we will create a web app that runs a Docker container. The Docker container contains a Welcome message. 
+In dieser exemplarischen Vorgehensweise erstellen wir eine Web-App, in der ein Docker-Container ausgeführt wird. Der Docker-Container enthält eine Willkommensnachricht. 
 
-Azure App Service are actually a collection of four services, all of which are built to help you host and run web applications. The four services (Web Apps, Mobile Apps, API Apps, and Logic Apps) look different, but in the end they all operate in very similar ways. Web Apps are the most commonly used of the four services, and this is the service that we will be using in this lab.
+Azure App Service ist eine Sammlung von vier Diensten, die zum Hosten und Ausführen von Webanwendungen dienen. Die vier Dienste (Web-Apps, Mobile Apps, API-Apps und Logic Apps) sehen unterschiedlich aus, funktionieren jedoch letztendlich alle sehr ähnlich. Web-Apps ist der am häufigsten verwendete Dienst der vier Dienste. Diesen Dienst werden wir in diesem Lab verwenden.
 
 # <a name="task-1-create-a-web-app"></a>Aufgabe 1: Erstellen einer Web-App 
 
@@ -17,7 +17,7 @@ In dieser Aufgabe erstellen Sie eine Azure App Service-Web-App.
 
 2. Suchen Sie auf dem Blatt **Alle Dienste** den Eintrag **App Services**, wählen Sie ihn aus, und klicken Sie auf **+ Hinzufügen, + Erstellen, + Neu**.
 
-3. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Web App<ept id="p2">**</ept> blade, specify the following settings (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the web app with letters and digits such that the name is globally unique). Leave the defaults for everything else, including the App Service Plan. 
+3. Geben Sie auf der Registerkarte **Grundlagen** des Blatts **Web-App** die folgenden Einstellungen an (ersetzen Sie **xxxx** im Namen der Web-App durch Buchstaben und Ziffern, sodass der Name global eindeutig ist). Behalten Sie ansonsten die Standardeinstellungen bei, auch für den App Service-Plan. 
 
     | Einstellung | Wert |
     | -- | -- |
@@ -51,16 +51,16 @@ In dieser Aufgabe testen wir die Web-App.
 
 2. Klicken Sie in **Benachrichtigungen** auf **Zur Ressource gehen**. 
 
-3. In dieser exemplarischen Vorgehensweise erstellen wir eine Web-App, in der ein Docker-Container ausgeführt wird.
+3. Suchen Sie auf dem Blatt **Überblick** den Eintrag **URL**. Kopieren Sie die URL in die Zwischenablage.
 
-    ![Der Docker-Container enthält eine Willkommensnachricht.](../images/0801.png)
+    ![Screenshot des Web-App-Eigenschaftenblatts. Die URL wird hervorgehoben.](../images/0801.png)
 
-4. In a new browser window, paste the URl and press enter. The Welcome to Azure Container Instances! welcome message will be displayed.
+4. Öffnen Sie eine neue Browserregisterkarte, fügen Sie die URL ein, und drücken Sie die Eingabetaste. Die Begrüßungsmeldung „Willkommen bei Azure Container Instances!“ wird angezeigt.
 
     ![Screenshot der Seite „Willkommen bei Azure Container Instances“.](../images/0802.png)
 
-5. Azure App Service ist eine Sammlung von vier Diensten, die zum Hosten und Ausführen von Webanwendungen dienen. 
+5. Wechseln Sie zurück zum Blatt **Übersicht** Ihrer Web-App, und scrollen Sie nach unten. Dort sehen Sie verschiedene Diagramme mit ein- und ausgehenden Daten und Anforderungen. Wenn Sie Schritt 4 einige Male wiederholen, sollte die entsprechende Telemetrie in diesen Diagrammen angezeigt werden. Dies umfasst die Anzahl der Anforderungen und die durchschnittliche Antwortzeit. 
 
-Die vier Dienste (Web-Apps, Mobile Apps, API-Apps und Logic Apps) sehen unterschiedlich aus, funktionieren jedoch letztendlich alle sehr ähnlich.
+**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
 
 Herzlichen Glückwunsch! Sie haben erfolgreich einen Azure App Service erstellt.

@@ -13,7 +13,7 @@ In dieser exemplarischen Vorgehensweise befassen wir uns mit Complianceangeboten
 
 2. Beachten Sie auf der Compliance-Webseite, dass die Angebote in **Global**, **US-Regierungsbehörden**, **Branche** und **Länderspezifisch** unterteilt sind.
 
-3. In the <bpt id="p1">**</bpt>Global<ept id="p1">**</ept> group, click <bpt id="p2">**</bpt>ISO 27001<ept id="p2">**</ept>. Scroll through the information provided. Scrolling down on the page will take you to a section <bpt id="p1">**</bpt>Compliance offerings specifically for Azure<ept id="p1">**</ept>
+3. Klicken Sie in der Gruppe **Global** auf **ISO 27001**. Sehen Sie sich die angezeigten Informationen an. Wenn Sie auf der Seite nach unten scrollen, gelangen Sie zum Abschnitt **Spezifische Complianceangebote für Azure**.
 
     **Hinweis:** Die Seite „ISO 27001 Information Security Management-Standards“ ist typisch für die Art der von uns bereitgestellten Compliance-Informationen.
 
@@ -22,17 +22,17 @@ In dieser exemplarischen Vorgehensweise befassen wir uns mit Complianceangeboten
 
 1. Navigieren Sie in einem Browser zur Webseite für das [Service Trust Portal](https://servicetrust.microsoft.com/).
 
-2. Notice the <bpt id="p1">**</bpt>Audit Reports<ept id="p1">**</ept> section. In this section are independent audit reports for different Microsoft's Cloud services. If you want to try the Compliance Manager you will need to login.
+2. Beachten Sie den Abschnitt **Überwachungsberichte**. In diesem Abschnitt finden Sie unabhängige Prüfberichte für verschiedene Microsoft-Clouddienste. Wenn Sie Compliance-Manager ausprobieren möchten, müssen Sie sich anmelden.
 
-3. It may take a couple of minutes for all the audits to load. You will need to login to your Microsoft account to view specific reports.
+3. Es kann einige Minuten dauern, bis alle Audits geladen sind. Sie müssen sich bei Ihrem Microsoft-Konto anmelden, um bestimmte Berichte anzuzeigen.
 
 
 # <a name="task-3-access-the-compliance-manager-via-the-service-trust-portal"></a>Aufgabe 3: Compliance-Manager über das Service Trust Portal öffnen
 
-The Compliance Manager makes it easy to perform risk assessments of Microsoft's cloud services. Use Compliance Manager to manage your organization's compliance activities from implementation to reporting. 
+Mit Compliance-Manager können Sie auf einfache Weise Risikobewertungen für Clouddienste von Microsoft durchführen. Verwenden Sie Compliance-Manager, um die Complianceaktivitäten Ihrer Organisation von der Implementierung bis zur Berichterstellung zu verwalten. 
 
-1. If your browser window is still open from Task 2, proceed to Step 2. Otherwise, In a browser, navigate to the <bpt id="p1">[</bpt>Compliance Manager<ept id="p1">](https://servicetrust.microsoft.com/ComplianceManager)</ept> page. 
+1. Falls Ihr Browserfenster noch aus Aufgabe 2 geöffnet ist, fahren Sie mit Schritt 2 fort. Navigieren Sie andernfalls in einem Browser zur Webseite mit dem [Compliance-Manager](https://servicetrust.microsoft.com/ComplianceManager). 
 
-2. Scroll down to <bpt id="p1">**</bpt>Audit Reports<ept id="p1">**</ept>. Take a look around.
+2. Scrollen Sie nach unten zu den **Überwachungsberichten**. Sehen Sie sich um.
 
-Congratulations! In this walkthrough, you accessed the Trust Center, Service Trust Portal (STP), and Compliance Manager.
+Glückwunsch! In dieser exemplarischen Vorgehensweise haben Sie auf Trust Center, Service Trust Portal (STP) und Compliance-Manager zugegriffen.

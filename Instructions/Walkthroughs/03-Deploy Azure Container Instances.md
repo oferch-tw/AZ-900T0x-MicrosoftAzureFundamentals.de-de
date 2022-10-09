@@ -6,7 +6,7 @@ wts:
 
 # <a name="03---deploy-azure-container-instances-10-min"></a>03 – Bereitstellen von Azure Container Instances (10 Min.)
 
-In this walkthrough we create, configure, and deploy a container by using Azure Container Instances (ACI) in the Azure Portal. The container is a Welcome to ACI web application that displays a static HTML page. 
+In dieser exemplarischen Vorgehensweise werden wir einen Container mit Azure Container Instances (ACI) im Azure Portal erstellen, konfigurieren und bereitstellen. Der Container ist eine Welcome to ACI-Webanwendung, die eine statische HTML-Seite anzeigt. 
 
 # <a name="task-1-create-a-container-instance"></a>Aufgabe 1: Erstellen einer Containerinstanz 
 
@@ -31,14 +31,14 @@ In dieser Aufgabe erstellen wir eine neue Containerinstanz für die Webanwendung
     | Size| ***Standard beibehalten***|
 
 
-4. Configure the Networking tab (replace <bpt id="p1">**</bpt>xxxxx<ept id="p1">**</ept> with letters and digits such that the name is globally unique). Leave all other settings at their default values.
+4. Konfigurieren Sie die Registerkarte „Netzwerk“ (ersetzen Sie **xxxxx** durch Buchstaben und Ziffern, sodass der Name global eindeutig ist). Behalten Sie für alle anderen Einstellungen die Standardwerte bei.
 
     | Einstellung| Wert|
     |--|--|
     | DNS-Namensbezeichnung| **mycontainerdnsxxxxx** |
 
     
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a <bpt id="p1">**</bpt>DNS name label not available<ept id="p1">**</ept> error message following the deployment, specify a different DNS name label (replacing the xxxxx) and re-deploy. 
+    **Hinweis**: Ihr Container ist unter „dns-name-label.region.azurecontainer.io“ öffentlich erreichbar. Wenn nach der Bereitstellung die Fehlermeldung **DNS-Namensbezeichnung nicht verfügbar** angezeigt wird, geben Sie eine andere DNS-Namensbezeichnung (xxxxx ersetzen) an, und wiederholen Sie die Bereitstellung. 
 
 5. Klicken Sie auf **Überprüfen + erstellen**, um die automatische Validierung zu starten.
 
@@ -59,11 +59,11 @@ In dieser Aufgabe überprüfen wir, ob die Containerinstanz ausgeführt wird, in
 
     ![Screenshot des Übersichtsbereichs für den neu erstellten Container im Azure-Portal mit hervorgehobenem FQDN. ](../images/0202.png)
 
-2. In dieser exemplarischen Vorgehensweise werden wir einen Container mit Azure Container Instances (ACI) im Azure Portal erstellen, konfigurieren und bereitstellen. 
+2. Kopieren Sie den FQDN des Containers in eine neue Registerkarte in Ihrem Webbrowser, und drücken Sie die **Eingabetaste**. Die Willkommensseite sollte angezeigt werden. 
 
     ![Screenshot der ACI-Begrüßungsnachricht, die in einem Webbrowser angezeigt wird.](../images/0203.png)
 
 
-Der Container ist eine Welcome to ACI-Webanwendung, die eine statische HTML-Seite anzeigt.
+**Glückwunsch!** Sie haben Azure Container Instances im Azure-Portal verwendet, um eine Anwendung in einem Container bereitzustellen.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.

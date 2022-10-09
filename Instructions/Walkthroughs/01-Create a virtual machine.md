@@ -40,7 +40,7 @@ In dieser exemplarischen Vorgehensweise erstellen wir einen virtuellen Computer 
 
 7. Übernehmen Sie die Standardwerte für die restlichen Einstellungen, und klicken Sie dann auf die Schaltfläche **Überprüfen + erstellen** am unteren Rand der Seite.
 
-8. Once Validation is passed click the <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> button. It can take anywhere from five to seven minutes to deploy the virtual machine.
+8. Sobald die Validierung bestanden ist, klicken Sie auf die Schaltfläche **Erstellen**. Die Bereitstellung des virtuellen Computers kann zwischen fünf und sieben Minuten dauern.
 
 9. Sie erhalten Updates auf der Bereitstellungsseite und im Bereich **Benachrichtigungen** (Glockensymbol in der oberen Menüleiste).
 
@@ -56,9 +56,9 @@ In dieser Aufgabe stellen wir per RDP (Remotedesktopprotokoll) eine Verbindung z
 
     ![Screenshot der Eigenschaften des virtuellen Computers mit hervorgehobener Schaltfläche „Verbinden“.](../images/0101.png)
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The following directions tell you how to connect to your VM from a Windows computer. On a Mac, you need an RDP client such as this Remote Desktop Client from the Mac App Store and on a Linux computer you can use an open source RDP client.
+    **Hinweis:** In den folgenden Anweisungen erfahren Sie, wie Sie von einem Windows-Computer aus eine Verbindung zu Ihrem virtuellen Computer herstellen. Auf einem Mac benötigen Sie einen RDP-Client wie etwa den Remotedesktopclient aus dem Mac App Store. Auf Linux-Computern können Sie einen Open-Source-RDP-Client verwenden.
 
-2. On the <bpt id="p1">**</bpt>Connect to virtual machine<ept id="p1">**</ept> page, keep the default options to connect with the public IP address over port 3389 and click <bpt id="p2">**</bpt>Download RDP File<ept id="p2">**</ept>. A file will download on the bottom left of your screen.
+2. Behalten Sie auf der Seite **Verbindung mit virtuellem Computer herstellen** die Standardoptionen zum Herstellen der Verbindung mit der öffentlichen IP-Adresse über Port 3389 bei, und klicken auf **RDP-Datei herunterladen**. Auf der linken Seite des Bildschirms wird eine Datei heruntergeladen.
 
 3. **Öffnen** Sie die heruntergeladene RDP-Datei (unten links auf Ihrem Laborcomputer), und klicken Sie auf **Verbinden**, wenn Sie dazu aufgefordert werden. 
 
@@ -66,11 +66,11 @@ In dieser Aufgabe stellen wir per RDP (Remotedesktopprotokoll) eine Verbindung z
 
 4. Melden Sie sich im Fenster **Windows-Sicherheit** mit den Administratoranmeldeinformationen an, die Sie beim Erstellen der VM verwendet haben: Benutzer **azureuser** und Kennwort **Pa$$w0rd1234**. 
 
-5. You may receive a warning certificate during the sign-in process. Click <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> or to create the connection and connect to your deployed VM. You should connect successfully.
+5. Möglicherweise wird bei der Anmeldung eine Zertifikatwarnung angezeigt. Klicken Sie auf **Ja**, um die Verbindung herzustellen und sich mit Ihrem bereitgestellten virtuellen Computer zu verbinden. Die Verbindung sollte erfolgreich hergestellt werden.
 
     ![Screenshot des Dialogfelds „Zertifikatwarnung“, in dem der Benutzer über ein nicht vertrauenswürdiges Zertifikat informiert wird, mit hervorgehobener Schaltfläche „Ja“. ](../images/0104.png)
 
-A new Virtual Machine (myVM) will launch inside your Lab. Close the Server Manager and dashboard windows that pop up (click "x" at top right). You should see the blue background of your virtual machine. <bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have deployed and connected to a Virtual Machine running Windows Server. 
+Ein neuer virtueller Computer (myVM) wird in Ihrem Lab gestartet. Schließen Sie den Server-Manager und die geöffneten Dashboard-Fenster (klicken Sie oben rechts auf das „X“). Jetzt sollten Sie den blauen Hintergrund Ihres virtuellen Computers sehen. **Glückwunsch!** Sie haben einen virtuellen Computer mit Windows Server bereitgestellt und sich mit ihm verbunden. 
 
 # <a name="task-3-install-the-web-server-role-and-test"></a>Aufgabe 3: Installieren und Testen der Webserverrolle
 
@@ -80,13 +80,13 @@ In dieser Aufgabe werden Sie die Webserverrolle auf dem soeben erstellten virtue
 
     ![Screenshot des Desktops des virtuellen Computers mit angeklickter Startschaltfläche und Auswahl von PowerShell mit „Als Administrator ausführen“ hervorgehoben.](../images/0105.png)
 
-2. In PowerShell, install the <bpt id="p1">**</bpt>Web-Server<ept id="p1">**</ept> feature on the virtual machine by running the following command. (Paste in the command and hit ENTER for the installment to begin).
+2. Installieren Sie das Feature **Webserver** in PowerShell auf dem virtuellen Computer, indem Sie den folgenden Befehl ausführen. (Kopieren Sie den Befehl ein und drücken Sie auf die EINGABETASTE, um mit der Installation zu beginnen.)
 
     ```PowerShell
     Install-WindowsFeature -name Web-Server -IncludeManagementTools
     ```
   
-3. When completed, a prompt will state <bpt id="p1">**</bpt>Success<ept id="p1">**</ept> with a value <bpt id="p2">**</bpt>True<ept id="p2">**</ept>. You do not need to restart the virtual machine to complete the installation. Close the RDP connection to the VM by clicking the <bpt id="p1">**</bpt>x<ept id="p1">**</ept> on the blue bar at the top center of your virtual machine. You can also minimize it by clicking the <bpt id="p1">**</bpt><ph id="ph1">-</ph><ept id="p1">**</ept> on the blue bar at the top center.
+3. Nach Abschluss wird eine **Erfolgsmeldung** mit dem Wert **Wahr** angezeigt. Sie müssen den virtuellen Computer nicht neu starten, um die Installation abzuschließen. Schließen Sie die RDP-Verbindung zur VM, indem Sie auf das **x** in der blauen Leiste oben in der Mitte Ihres virtuellen Computers klicken. Sie können die VM auch minimieren, indem Sie auf das **-** in der blauen Leiste oben in der Mitte klicken.
 
     ![Screenshot der Windows PowerShell-Eingabeaufforderung mit dem erfolgreich abgeschlossenen Befehl „Install-WindowsFeature -name Web-Server -IncludeManagementTools“ und der Ausgabe, dass der Vorgang erfolgreich war.](../images/0106.png)
 
@@ -98,7 +98,7 @@ In dieser Aufgabe werden Sie die Webserverrolle auf dem soeben erstellten virtue
 
     ![Screenshot der standardmäßigen Begrüßungsseite des IIS-Webservers, auf die über die öffentliche IP-Adresse in einem Webbrowser zugegriffen wird.](../images/0108.png)
 
-<bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have created a new VM running a web server that is accessible via its public IP address. If you had a web application to host, you could deploy application files to the virtual machine and host them for public access on the deployed virtual machine.
+**Glückwunsch!** Sie haben eine neue VM erstellt, die über ihre öffentliche IP-Adresse erreichbar ist. Wenn Sie eine Webanwendung hosten müssen, können Sie Anwendungsdateien auf dem virtuellen Computer bereitstellen und sie für öffentlichen Zugriff auf dem bereitgestellten virtuellen Computer hosten.
 
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see verify that the deletion completed successfully. 
+**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu überprüfen, ob der Löschvorgang erfolgreich abgeschlossen wurde. 
