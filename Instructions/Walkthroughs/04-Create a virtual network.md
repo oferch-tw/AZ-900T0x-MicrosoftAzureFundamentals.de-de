@@ -27,7 +27,7 @@ Hinweis: Deaktivieren Sie vor Beginn des Labs sowohl die öffentliche als auch d
     | Region | **(USA) USA, Osten** |
     
    
-4. Click the <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> button. Ensure the validation passes. Then hit create to deploy the resource.
+4. Klicken Sie auf **Überprüfen + erstellen**. Stellen Sie sicher, dass die Validierung erfolgreich ist. Klicken Sie anschließend auf „erstellen“, um die Ressource bereitzustellen.
 
 
 # <a name="task-2-create-two-virtual-machines"></a>Aufgabe 2: Erstellen von zwei virtuellen Computern
@@ -51,13 +51,13 @@ In dieser Aufgabe erstellen wir zwei virtuelle Computer im virtuellen Netzwerk.
    | Ausgewählte eingehende Ports| **RDP (3389)** |
    
 
-3. Select the <bpt id="p1">**</bpt>Networking<ept id="p1">**</ept> tab. Make sure the virtual machine is placed in the <bpt id="p2">**</bpt>vnet1<ept id="p2">**</ept> virtual network. Review the default settings, but do not make any other changes. 
+3. Wählen Sie die Registerkarte **Netzwerk** aus. Stellen Sie sicher, dass sich der virtuelle Computer im virtuellen Netzwerk **vnet1** befindet. Überprüfen Sie die Standardeinstellungen, nehmen Sie jedoch keine weiteren Änderungen vor. 
 
-4. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>. After the Validation passes, click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>. Deployment times can vary but it can generally take between three to six minutes to deploy.
+4. Klicken Sie auf **Überprüfen + erstellen**. Klicken Sie nach Abschluss der Validierung auf **Erstellen**. Die Bereitstellungszeiten können variieren, die Bereitstellung kann jedoch im Allgemeinen zwischen drei und sechs Minuten dauern.
 
 5. Überwachen Sie Ihre Bereitstellung, fahren Sie jedoch mit dem nächsten Schritt fort. 
 
-6. Create a second virtual machine by repeating steps <bpt id="p1">**</bpt>2 to 4<ept id="p1">**</ept> above. Make sure you use a different virtual machine name, that the virtual machine is in the same virtual network, and is using a new public IP address:
+6. Erstellen Sie einen zweiten virtuellen Computer, indem Sie die oben genannten Schritte **2 bis 4** wiederholen. Stellen Sie sicher, dass Sie einen anderen Namen für den virtuellen Computer verwenden, dass sich der virtuelle Computer im selben virtuellen Netzwerk befindet und dass er eine neue öffentliche IP-Adresse verwendet:
 
     | Einstellung | Wert |
     | --- | --- |
@@ -70,9 +70,9 @@ In dieser Aufgabe erstellen wir zwei virtuelle Computer im virtuellen Netzwerk.
 
 # <a name="task-3-test-the-connection"></a>Aufgabe 3: Testen der Verbindung 
 
-In this task, we will try to test whether the virtual machines can communicate (ping) each other. If not we will install a rule to allow an ICMP connection. Usually ICMP connections are automatically blocked.
+In dieser Aufgabe werden testen, ob die virtuellen Computer miteinander kommunizieren (pingen) können. Falls nicht, werden wir eine Regel erstellen, um die ICMP-Verbindung zu erlauben. ICMP-Verbindungen werden normalerweise automatisch blockiert.
 
-1. From the <bpt id="p1">**</bpt>All resources<ept id="p1">**</ept> blade, search for <bpt id="p2">**</bpt>vm1<ept id="p2">**</ept>, open its <bpt id="p3">**</bpt>Overview<ept id="p3">**</ept> blade, and make sure its <bpt id="p4">**</bpt>Status<ept id="p4">**</ept> is <bpt id="p5">**</bpt>Running<ept id="p5">**</ept>. You may need to <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> the page.
+1. Suchen Sie auf dem Blatt **Alle Ressourcen** nach **vm1**, öffnen Sie das zugehörige Blatt **Übersicht**, und stellen Sie sicher, dass für **Status** **Wird ausgeführt** angezeigt wird. Möglicherweise müssen Sie die Seite **aktualisieren**.
 
 2. Wählen Sie auf dem Blatt **Übersicht** die Option **Verbinden** aus, und wählen Sie dann **RDP** im Dropdownfeld aus.
 
@@ -84,7 +84,7 @@ In this task, we will try to test whether the virtual machines can communicate (
 
 5. Geben Sie im Fenster **Windows-Sicherheit** den Benutzernamen **azureuser** und das Kennwort **Pa$$$w0rd1234** ein, und klicken Sie dann auf **OK**.
 
-6. You may receive a certificate warning during the sign-in process. Click <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> to create the connection and connect to your deployed VM. You should connect successfully. Close the Windows Server and Dashboard windows that pop up. You should see a Blue Windows background. You are now in your virtual machine.
+6. Während des Anmeldevorgangs wird unter Umständen eine Zertifikatwarnung angezeigt. Klicken Sie auf **Ja**, um die Verbindung herzustellen und sich mit Ihrem bereitgestellten virtuellen Computer zu verbinden. Die Verbindung sollte erfolgreich hergestellt werden. Schließen Sie den Windows Server und die geöffneten Dashboard-Fenster. Jetzt sollte ein blauer Windows-Hintergrund angezeigt werden. Sie befinden sich jetzt auf Ihrem virtuellen Computer.
 
 7. Stellen Sie auf **beiden** neu erstellten virtuellen Computern über RDP eine Verbindung her, und deaktivieren Sie die öffentliche und die private Firewall, indem Sie die „Startmenü > Einstellungen > Netzwerk und Internet-> Windows-Firewall“ öffnen.
 
@@ -96,9 +96,9 @@ In this task, we will try to test whether the virtual machines can communicate (
    ping vm2
    ```
 
- 10. You should be successful. You have pinged VM2 from VM1.
+ 10. Der Ping sollte erfolgreich sein. Sie haben einen Ping von vm1 an vm2 gesendet.
 
 
-<bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have configured and deployed two virtual machines in a virtual network, and then you were able to connect them.
+**Glückwunsch!** Sie haben zwei virtuelle Computer in einem virtuellen Netzwerk bereitgestellt und eine Verbindung zwischen den Computern hergestellt.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.

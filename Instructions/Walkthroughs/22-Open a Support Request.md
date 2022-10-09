@@ -13,9 +13,9 @@ In dieser exemplarischen Vorgehensweise werden wir die verfügbaren Supportplano
 
 2. Suchen Sie auf dem Blatt **Alle Dienste** die Option **Hilfe und Support**, und wählen Sie sie aus. Wählen Sie anschließend **Supportpläne** aus.
 
-3. Take a few minutes to review the different support plans. Notice what is included in the <bpt id="p1">**</bpt>Basic<ept id="p1">**</ept> plan. 
+3. Nehmen Sie sich ein paar Minuten Zeit, um die verschiedenen Supportpläne zu überprüfen. Beachten Sie, was im **Basic**-Plan enthalten ist. 
 
-4. Click <bpt id="p1">**</bpt>+ New support request<ept id="p1">**</ept>. The ticket is created based on the values you specify. 
+4. Klicken Sie auf **+ Neue Supportanfrage**. Das Ticket wird basierend auf den von Ihnen angegebenen Werten erstellt. 
 
     | Einstellung | Wert|
     |----|--------|
@@ -29,9 +29,9 @@ In dieser exemplarischen Vorgehensweise werden wir die verfügbaren Supportplano
 
 5. Klicken Sie auf **Next: Lösungen >>** und lesen Sie die empfohlenen Lösungen durch.
 
-6. Click <bpt id="p1">**</bpt>Next: Details &gt;&gt;<ept id="p1">**</ept>. When submitting an actual support request, you would provide as much information as possible to allow for a speedy resolution of the issue. Your contact choices on this page depend on your support plan. 
+6. Klicken Sie auf **Next: Details >>** . Wenn Sie eine tatsächliche Supportanfrage senden, geben Sie so viele Informationen wie möglich an, um eine schnelle Lösung des Problems zu ermöglichen. Ihre Kontaktauswahl auf dieser Seite hängt von Ihrem Supportplan ab. 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will stop at this point. Do you understand how to submit a technical request?
+    **Hinweis:** An diesem Punkt werden wir aufhören. Verstehen Sie, wie Sie eine technische Anfrage einreichen können?
 
 # <a name="task-2-create-a-billing-support-request"></a>Aufgabe 2: Erstellen einer Supportanfrage zur Abrechnung
 
@@ -47,12 +47,12 @@ In dieser exemplarischen Vorgehensweise werden wir die verfügbaren Supportplano
 
 2. Klicken Sie auf **Next: Lösungen >>** und lesen Sie die empfohlenen Lösungen durch.
 
-3. Click <bpt id="p1">**</bpt>Next: Details<ept id="p1">**</ept>.  When submitting a real support request you would provide as much information as possible to allow for a speedy resolution of the issue. 
+3. Klicken Sie auf **Next: Details**.  Wenn Sie eine echte Supportanfrage senden, geben Sie so viele Informationen wie möglich an, um eine schnelle Lösung des Problems zu ermöglichen. 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will STOP at this point. Do you understand how to submit a support request?
+    **Hinweis:** An diesem Punkt werden wir aufhören. Verstehen Sie, wie Sie eine Supportanfrage stellen können?
 
-4. Click <bpt id="p1">**</bpt>All support requests<ept id="p1">**</ept>. This is where your support requests are shown. An email is also sent to your email address containing details of the support request.
+4. Klicken Sie auf **Alle Supportanfragen**. Hier werden Ihre Supportanfragen angezeigt. Eine E-Mail, die Details zur Supportanfrage enthält, wird auch an Ihre E-Mail-Adresse gesendet.
 
-Nehmen Sie sich ein paar Minuten Zeit, um die verschiedenen Supportpläne zu überprüfen.
+Glückwunsch! Sie haben die verfügbaren Supportplanoptionen angezeigt und das Erstellen und Überwachen einer neuen Supportanfrage geübt.
 
 **Hinweis:** Klicken Sie hier für weitere Informationen zum [**Erstellen eines Azure-Supporttickets**](https://azure.microsoft.com/en-us/support/create-ticket).

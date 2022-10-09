@@ -11,21 +11,21 @@ In dieser exemplarischen Vorgehensweise stellen wir einen virtuellen Computer mi
 
 In dieser Aufgabe durchsuchen wir den Azure-Schnellstartkatalog und stellen eine Vorlage bereit, mit der ein virtueller Computer erstellt wird. 
 
-1. Within the lab environment, open a new browser window, and enter T <ph id="ph1">https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true</ph>. In the gallery you will find a number of popular and recently updated templates. These templates automate deployment of Azure resources, including installation of popular software packages. Browse through the many different types of templates that are available.
+1. Öffnen Sie in der Laborumgebung ein neues Browserfenster, und geben Sie https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true ein. Im Katalog finden Sie eine Reihe beliebter und kürzlich aktualisierter Vorlagen. Diese Vorlagen automatisieren die Bereitstellung von Azure-Ressourcen, einschließlich der Installation gängiger Softwarepakete. Durchsuchen Sie die vielen verschiedenen Arten von Vorlagen, die verfügbar sind.
 
 3. Wählen Sie **Bereitstellen einer einfachen Windows-VM** aus.
 
-4. Click the <bpt id="p1">**</bpt>Deploy to Azure<ept id="p1">**</ept> button. Your browser session will be automatically redirected to the <bpt id="p1">[</bpt>Azure portal<ept id="p1">](http://portal.azure.com/)</ept>.
+4. Klicken Sie auf die Schaltfläche **Bereitstellen in Azure**. Ihre Browsersitzung wird automatisch zum [Azure-Portal](http://portal.azure.com/) umgeleitet.
 
-  <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The <bpt id="p2">**</bpt>Deploy to Azure<ept id="p2">**</ept> button enables you to deploy the template via the Azure portal. During such deployment, you will be prompted only for small set of configuration parameters. 
+  **Hinweis:** Die Schaltfläche **Bereitstellung in Azure** ermöglicht es Ihnen, die Vorlage über das Azure-Portal bereitzustellen. Während einer solchen Bereitstellung werden Sie nur zur Eingabe eines kleinen Satzes von Konfigurationsparametern aufgefordert. 
 
 5. Melden Sie sich mit den zuvor in den Anweisungen angegebenen Anmeldeinformationen bei Ihrem Azure-Abonnement an, wenn Sie dazu aufgefordert werden.
 
-6. Click <bpt id="p1">**</bpt>Edit template<ept id="p1">**</ept>. The Resource Manager template format uses the JSON format. Review the parameters and variables.  Then locate the parameter for virtual machine name. Change the name to <bpt id="p1">**</bpt>myVMTemplate<ept id="p1">**</ept>. <bpt id="p1">**</bpt>Save<ept id="p1">**</ept> your changes. 
+6. Klicken Sie auf **Vorlage bearbeiten**. Die Resource Manager-Vorlage verwendet das JSON-Format. Überprüfen Sie die Parameter und Variablen.  Suchen Sie anschließend den Parameter für den Namen des virtuellen Computers. Ändern Sie den Namen zu **myVMTemplate**. **Speichern** Sie die Änderungen. 
 
     ![Screenshot der Vorlage mit der hervorgehobenen Änderung des VM-Namens.](../images/0901.png)
 
-7. Now configure the parameters required by the template (replace <bpt id="p1">***</bpt>xxxx<ept id="p1">***</ept> in the DNS label prefix with letters and digits such that the label is globally unique). Leave the defaults for everything else. 
+7. Konfigurieren Sie die für die Vorlage erforderlichen Parameter (ersetzen Sie ***xxxx*** im DNS-Bezeichnungspäfix durch Buchstaben und Ziffern, sodass die Bezeichnung global eindeutig ist). Belassen Sie ansonsten die Standardeinstellungen. 
 
     | Einstellung| Wert|
     |----|----|
@@ -50,7 +50,7 @@ In dieser Aufgabe überprüfen wir, ob der virtuelle Computer ordnungsgemäß be
 
 2. Stellen Sie sicher, dass Ihr neuer virtueller Computer erstellt wurde. 
 
-    ![Screenshot of the virtual machines page. The new VM is shown and running.](../images/0902.png)
+    ![Screenshot der Seite „Virtuelle Computer“. Der neue virtuelle Computer wird angezeigt und ausgeführt.](../images/0902.png)
 
 3. Wählen Sie Ihren virtuellen Computer aus, wählen Sie im Bereich **Übersicht** die Registerkarte **Überwachung** aus, und scrollen Sie nach unten zu den Überwachungsdaten.
 
@@ -60,15 +60,15 @@ In dieser Aufgabe überprüfen wir, ob der virtuelle Computer ordnungsgemäß be
 
     ![Screenshot der Überwachungsdiagramme zum virtuellen Computer.](../images/0903.png)
 
-5. Öffnen Sie in der Laborumgebung ein neues Browserfenster, und geben Sie https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true ein.
+5. Klicken Sie auf ein Diagramm. Beachten Sie, dass Sie eine **Metrik hinzufügen** und den Diagrammtyp ändern können.
 
-6. Im Katalog finden Sie eine Reihe beliebter und kürzlich aktualisierter Vorlagen.
-7. Diese Vorlagen automatisieren die Bereitstellung von Azure-Ressourcen, einschließlich der Installation gängiger Softwarepakete. 
+6. Kehren Sie zum Blatt **Übersicht** zurück. (Umschalter nach links verschieben)
+7. Klicken Sie auf **Aktivitätsprotokoll** (linker Bereich). In Aktivitätsprotokollen werden Ereignisse wie das Erstellen oder Ändern von Ressourcen aufgezeichnet. 
 
 8. Klicken Sie auf **Filter hinzufügen**, und experimentieren Sie mit der Suche nach verschiedenen Ereignistypen und Operationen. 
 
     ![Screenshot der Seite „Filter hinzufügen“ mit ausgewähltem Ereignistyp.](../images/0904.png)
 
-Durchsuchen Sie die vielen verschiedenen Arten von Vorlagen, die verfügbar sind.
+Glückwunsch! Sie haben eine Ressource mit einer Vorlage erstellt und die Vorlage in Azure bereitgestellt.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Hinweis:** Um zusätzliche Kosten zu vermeiden, können Sie diese Ressourcengruppe bei Bedarf entfernen. Suchen Sie nach Ressourcengruppen, klicken Sie auf Ihre Ressourcengruppe und dann auf **Ressourcengruppe löschen**. Überprüfen Sie den Namen der Ressourcengruppe und klicken Sie dann auf **Löschen**. Überwachen Sie die **Benachrichtigungen**, um zu sehen, wie der Löschvorgang abläuft.
